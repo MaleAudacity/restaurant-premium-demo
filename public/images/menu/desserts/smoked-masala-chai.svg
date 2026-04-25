@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#1a0e04"/><stop offset="100%" stop-color="#0c1a0f"/></radialGradient>
+    <radialGradient id="cup" cx="40%" cy="30%" r="65%"><stop offset="0%" stop-color="#2a1a08"/><stop offset="100%" stop-color="#140c04"/></radialGradient>
+    <radialGradient id="chai" cx="45%" cy="25%" r="65%"><stop offset="0%" stop-color="#d48820"/><stop offset="50%" stop-color="#b06010"/><stop offset="100%" stop-color="#7a3808"/></radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <!-- Saucer shadow -->
+  <ellipse cx="200" cy="205" rx="78" ry="12" fill="#010000" opacity="0.7"/>
+  <!-- Saucer -->
+  <ellipse cx="200" cy="198" rx="78" ry="14" fill="#1a1008"/>
+  <ellipse cx="200" cy="195" rx="72" ry="11" fill="#221408"/>
+  <ellipse cx="200" cy="193" rx="62" ry="8" fill="#1a1008"/>
+  <!-- Saucer rim detail -->
+  <ellipse cx="200" cy="195" rx="72" ry="11" fill="none" stroke="#7a5020" stroke-width="1" opacity="0.4"/>
+
+  <!-- Tea cup body (traditional kulhad/clay cup) -->
+  <path d="M163 192 Q158 165 162 142 Q166 128 200 126 Q234 128 238 142 Q242 165 237 192 Z" fill="#4a2810" opacity="0.5"/>
+  <path d="M165 190 Q160 165 164 144 Q168 131 200 129 Q232 131 236 144 Q240 165 235 190 Z" fill="url(#cup)"/>
+  <path d="M167 188 Q162 165 166 146 Q170 133 200 131 Q230 133 234 146 Q238 165 233 188 Z" fill="#201408"/>
+
+  <!-- Cup rim -->
+  <ellipse cx="200" cy="132" rx="34" ry="8" fill="#3a2010" stroke="#5a3018" stroke-width="1.5"/>
+  <ellipse cx="200" cy="130" rx="31" ry="6" fill="#2a1808"/>
+  <!-- Copper rim band -->
+  <ellipse cx="200" cy="131" rx="34" ry="8" fill="none" stroke="#c07820" stroke-width="1.2" opacity="0.5"/>
+
+  <!-- Chai surface -->
+  <ellipse cx="200" cy="132" rx="29" ry="6" fill="url(#chai)"/>
+  <ellipse cx="200" cy="131" rx="26" ry="5" fill="#c07818"/>
+  <!-- Milk swirl on chai -->
+  <path d="M188 128 Q200 122 212 128" fill="none" stroke="#f8f0e0" stroke-width="2" opacity="0.55" stroke-linecap="round"/>
+
+  <!-- Steam wisps -->
+  <path d="M185 122 Q183 112 185 103 Q187 96 184 88" fill="none" stroke="#9a8870" stroke-width="1.5" opacity="0.35" stroke-linecap="round"/>
+  <path d="M200 119 Q198 109 200 100 Q202 93 199 85" fill="none" stroke="#9a8870" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+  <path d="M215 121 Q217 111 215 102 Q213 95 216 87" fill="none" stroke="#9a8870" stroke-width="1.5" opacity="0.32" stroke-linecap="round"/>
+
+  <!-- Handle -->
+  <path d="M237 145 Q258 138 260 158 Q260 172 238 168" fill="none" stroke="#4a2810" stroke-width="6" stroke-linecap="round" opacity="0.75"/>
+  <path d="M237 145 Q256 139 258 158 Q258 170 238 168" fill="none" stroke="#6a3818" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Chai spice flecks on surface -->
+  <circle cx="194" cy="130" r="1.2" fill="#2a1408" opacity="0.8"/>
+  <circle cx="202" cy="129" r="1" fill="#2a1408" opacity="0.75"/>
+  <circle cx="208" cy="131" r="1.2" fill="#2a1408" opacity="0.8"/>
+
+  <!-- Cardamom pod garnish on saucer -->
+  <ellipse cx="242" cy="192" rx="6" ry="3" fill="#4a6020" transform="rotate(-20 242 192)" opacity="0.8"/>
+  <ellipse cx="242" cy="192" rx="4.5" ry="2" fill="#5a7028" transform="rotate(-20 242 192)" opacity="0.7"/>
+
+  <!-- Cinnamon stick on saucer -->
+  <rect x="152" y="189" width="22" height="5" rx="2.5" fill="#7a3808" transform="rotate(15 163 191)" opacity="0.8"/>
+  <rect x="153" y="190" width="20" height="3" rx="1.5" fill="#8a4010" transform="rotate(15 163 191)" opacity="0.7"/>
+
+  <!-- Star anise on saucer -->
+  <circle cx="178" cy="196" r="6" fill="none" stroke="#6a3010" stroke-width="1.5" opacity="0.65"/>
+  <circle cx="178" cy="196" r="2.5" fill="#5a2808" opacity="0.6"/>
+  <line x1="178" y1="190" x2="178" y2="202" stroke="#6a3010" stroke-width="1" opacity="0.6"/>
+  <line x1="172" y1="196" x2="184" y2="196" stroke="#6a3010" stroke-width="1" opacity="0.6"/>
+  <line x1="174" y1="192" x2="182" y2="200" stroke="#6a3010" stroke-width="0.8" opacity="0.5"/>
+  <line x1="174" y1="200" x2="182" y2="192" stroke="#6a3010" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Smoke hint (wood-smoked) -->
+  <path d="M170 118 Q168 108 170 100" fill="none" stroke="#6a5840" stroke-width="1" opacity="0.2" stroke-linecap="round"/>
+
+  <!-- Label -->
+  <text x="200" y="240" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#e8a020" opacity="0.9" letter-spacing="0.3">Smoked Masala Chai</text>
+  <text x="200" y="257" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#c8b89a" opacity="0.6" letter-spacing="1.5">DESSERTS &amp; POUR</text>
+</svg>

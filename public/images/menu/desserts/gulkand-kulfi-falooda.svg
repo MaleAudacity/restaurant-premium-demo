@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#1a0a18"/><stop offset="100%" stop-color="#0c1a0f"/></radialGradient>
+    <linearGradient id="kulfi" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#ffe0f0"/><stop offset="40%" stop-color="#f0b0d0"/><stop offset="100%" stop-color="#c07090"/></linearGradient>
+    <radialGradient id="glass" cx="50%" cy="30%" r="60%"><stop offset="0%" stop-color="#1e1828"/><stop offset="100%" stop-color="#100c18"/></radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <!-- Tall glass shadow -->
+  <ellipse cx="200" cy="200" rx="40" ry="10" fill="#030106" opacity="0.7"/>
+  <!-- Glass body -->
+  <path d="M165 185 Q160 140 162 105 Q163 90 200 88 Q237 90 238 105 Q240 140 235 185 Z" fill="url(#glass)" opacity="0.85"/>
+  <path d="M167 183 Q162 140 164 107 Q165 93 200 91 Q235 93 236 107 Q238 140 233 183 Z" fill="#16121e"/>
+  <!-- Glass rim -->
+  <ellipse cx="200" cy="90" rx="38" ry="9" fill="#1e1828" stroke="#3a2848" stroke-width="1.5"/>
+  <ellipse cx="200" cy="88" rx="36" ry="7" fill="#16121e"/>
+  <!-- Glass shine -->
+  <path d="M167 120 Q163 150 165 180" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.08" stroke-linecap="round"/>
+
+  <!-- Falooda vermicelli at bottom -->
+  <path d="M170 175 Q185 170 200 174 Q215 170 230 175" fill="none" stroke="#f0d0e8" stroke-width="1.5" opacity="0.6"/>
+  <path d="M172 179 Q187 174 200 178 Q213 174 228 179" fill="none" stroke="#e8c8e0" stroke-width="1.5" opacity="0.5"/>
+  <path d="M174 183 Q189 178 200 182 Q211 178 226 183" fill="none" stroke="#f0d0e8" stroke-width="1" opacity="0.45"/>
+
+  <!-- Rose milk layer -->
+  <path d="M167 145 Q167 170 175 180 Q186 185 200 185 Q214 185 225 180 Q233 170 233 145Z" fill="#d06880" opacity="0.6"/>
+  <path d="M167 145 Q167 155 175 162 Q186 167 200 167 Q214 167 225 162 Q233 155 233 145Z" fill="#e07888" opacity="0.5"/>
+
+  <!-- Kulfi on stick rising from glass -->
+  <rect x="196" y="60" width="8" height="60" rx="1" fill="#a07040" opacity="0.7"/>
+  <!-- Kulfi body -->
+  <path d="M178 78 Q176 98 182 110 Q190 118 200 118 Q210 118 218 110 Q224 98 222 78 Q215 65 200 63 Q185 65 178 78Z" fill="url(#kulfi)"/>
+  <path d="M180 78 Q178 97 183 108 Q191 116 200 116 Q209 116 217 108 Q222 97 220 78 Q213 67 200 65 Q187 67 180 78Z" fill="#ffe8f4"/>
+  <!-- Kulfi texture lines -->
+  <path d="M185 82 Q200 78 215 82" fill="none" stroke="#f0c8e0" stroke-width="1" opacity="0.5"/>
+  <path d="M183 90 Q200 86 217 90" fill="none" stroke="#f0c8e0" stroke-width="1" opacity="0.45"/>
+
+  <!-- Rose petals on kulfi -->
+  <path d="M185 72 Q190 65 196 70 Q192 76 186 74 Q184 74 185 72Z" fill="#e87888" opacity="0.75"/>
+  <path d="M205 70 Q210 63 216 68 Q212 74 206 72 Q204 72 205 70Z" fill="#f08898" opacity="0.65"/>
+
+  <!-- Pistachio bits on top -->
+  <ellipse cx="192" cy="68" rx="3.5" ry="1.5" fill="#3a8020" transform="rotate(-20 192 68)" opacity="0.85"/>
+  <ellipse cx="208" cy="67" rx="3" ry="1.5" fill="#4a9028" transform="rotate(15 208 67)" opacity="0.8"/>
+
+  <!-- Gulkand (rose jam) swirl in milk -->
+  <path d="M175 152 Q190 148 200 150 Q210 148 225 152" fill="none" stroke="#cc4868" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
+
+  <!-- Basil seeds floating -->
+  <circle cx="178" cy="165" r="2" fill="#1a0a18" opacity="0.7"/>
+  <circle cx="192" cy="162" r="1.8" fill="#1a0a18" opacity="0.65"/>
+  <circle cx="208" cy="163" r="2" fill="#1a0a18" opacity="0.7"/>
+  <circle cx="222" cy="165" r="1.8" fill="#1a0a18" opacity="0.65"/>
+
+  <!-- Label -->
+  <text x="200" y="235" text-anchor="middle" font-family="Georgia, serif" font-size="12" font-weight="bold" fill="#e8a020" opacity="0.9" letter-spacing="0.3">Gulkand Kulfi Falooda</text>
+  <text x="200" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#c8b89a" opacity="0.6" letter-spacing="1.5">DESSERTS &amp; POUR</text>
+</svg>

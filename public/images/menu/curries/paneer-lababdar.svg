@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#1a0e06"/><stop offset="100%" stop-color="#0c1a0f"/></radialGradient>
+    <radialGradient id="gravy" cx="50%" cy="30%" r="70%"><stop offset="0%" stop-color="#e86820"/><stop offset="50%" stop-color="#c84808"/><stop offset="100%" stop-color="#7a2808"/></radialGradient>
+    <radialGradient id="bowl" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#2a1a10"/><stop offset="100%" stop-color="#140c06"/></radialGradient>
+    <radialGradient id="paneer" cx="30%" cy="25%" r="65%"><stop offset="0%" stop-color="#fffae0"/><stop offset="60%" stop-color="#f5e8b0"/><stop offset="100%" stop-color="#e0c870"/></radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <!-- Bowl shadow -->
+  <ellipse cx="200" cy="193" rx="108" ry="20" fill="#020100" opacity="0.65"/>
+  <!-- Bowl -->
+  <ellipse cx="200" cy="184" rx="110" ry="38" fill="url(#bowl)"/>
+  <ellipse cx="200" cy="180" rx="106" ry="36" fill="#1e1208"/>
+  <!-- Rim -->
+  <ellipse cx="200" cy="152" rx="106" ry="17" fill="#2a1a10" stroke="#4a2810" stroke-width="1"/>
+  <ellipse cx="200" cy="150" rx="102" ry="15" fill="#221408"/>
+  <ellipse cx="200" cy="151" rx="106" ry="17" fill="none" stroke="#9a6a28" stroke-width="1" opacity="0.5"/>
+
+  <!-- Gravy surface -->
+  <ellipse cx="200" cy="152" rx="98" ry="14" fill="url(#gravy)"/>
+  <ellipse cx="200" cy="150" rx="94" ry="12" fill="#d06020"/>
+  <!-- Surface sheen -->
+  <ellipse cx="180" cy="145" rx="18" ry="7" fill="#e87030" opacity="0.45"/>
+  <ellipse cx="222" cy="147" rx="13" ry="6" fill="#d86820" opacity="0.35"/>
+
+  <!-- Paneer cubes in gravy -->
+  <rect x="152" y="143" width="22" height="18" rx="3" fill="url(#paneer)"/>
+  <rect x="153" y="141" width="20" height="16" rx="2.5" fill="#fff8d8"/>
+  <rect x="188" y="140" width="22" height="18" rx="3" fill="url(#paneer)"/>
+  <rect x="189" y="138" width="20" height="16" rx="2.5" fill="#fffae0"/>
+  <rect x="224" y="143" width="20" height="17" rx="3" fill="url(#paneer)" opacity="0.85"/>
+
+  <!-- Cream swirl -->
+  <path d="M176 135 Q200 126 224 135" fill="none" stroke="#fffaf0" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+  <!-- Second swirl -->
+  <path d="M184 131 Q200 123 216 131" fill="none" stroke="#fff8e8" stroke-width="1.5" stroke-linecap="round" opacity="0.45"/>
+
+  <!-- Tomato paste dot -->
+  <circle cx="168" cy="135" r="6" fill="#cc2808" opacity="0.7"/>
+  <circle cx="168" cy="134" r="4" fill="#e83010" opacity="0.6"/>
+
+  <!-- Fenugreek tarka (dark specks) -->
+  <circle cx="193" cy="128" r="1.5" fill="#1a0800" opacity="0.9"/>
+  <circle cx="200" cy="126" r="1.2" fill="#1a0800" opacity="0.8"/>
+  <circle cx="207" cy="128" r="1.5" fill="#1a0800" opacity="0.9"/>
+
+  <!-- Coriander leaf -->
+  <path d="M218 125 Q226 115 230 121 Q226 129 218 125Z" fill="#3a8820"/>
+  <path d="M224 117 Q232 107 236 113 Q232 121 224 117Z" fill="#4a9828"/>
+  <path d="M220 122 Q226 115 228 119" fill="none" stroke="#2a6a18" stroke-width="0.6"/>
+
+  <!-- Charred tomato chunk -->
+  <ellipse cx="235" cy="143" rx="8" ry="5" fill="#cc2808" opacity="0.8"/>
+  <ellipse cx="235" cy="141" rx="6" ry="3.5" fill="#dd3818" opacity="0.7"/>
+
+  <!-- Naan corner -->
+  <path d="M295 175 Q316 160 324 172 Q320 185 305 187 Q293 185 295 175Z" fill="#e8c070" opacity="0.7"/>
+  <path d="M298 177 Q313 163 321 172" fill="none" stroke="#c8a040" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Label -->
+  <text x="200" y="235" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#e8a020" opacity="0.9">Paneer Lababdar</text>
+  <text x="200" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#c8b89a" opacity="0.6" letter-spacing="1.5">ROYAL CURRIES</text>
+</svg>

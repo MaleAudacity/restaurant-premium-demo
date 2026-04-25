@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#1a1208"/><stop offset="100%" stop-color="#0c1a0f"/></radialGradient>
+    <radialGradient id="paneer" cx="30%" cy="25%" r="70%"><stop offset="0%" stop-color="#ffe0a0"/><stop offset="50%" stop-color="#f0c060"/><stop offset="100%" stop-color="#c88020"/></radialGradient>
+    <radialGradient id="pepper" cx="40%" cy="30%" r="65%"><stop offset="0%" stop-color="#e84828"/><stop offset="100%" stop-color="#a02010"/></radialGradient>
+    <radialGradient id="charr" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#2a0800" stop-opacity="0.85"/><stop offset="100%" stop-color="#2a0800" stop-opacity="0"/></radialGradient>
+    <linearGradient id="skewer" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#8a7050"/><stop offset="50%" stop-color="#b09060"/><stop offset="100%" stop-color="#8a7050"/></linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <!-- Grill plate -->
+  <ellipse cx="200" cy="186" rx="115" ry="28" fill="#0a0800" opacity="0.6"/>
+  <ellipse cx="200" cy="179" rx="118" ry="30" fill="#181208"/>
+  <ellipse cx="200" cy="175" rx="110" ry="26" fill="#201808"/>
+  <!-- Grill lines on plate -->
+  <line x1="108" y1="178" x2="292" y2="178" stroke="#2a2010" stroke-width="3" opacity="0.6"/>
+  <line x1="108" y1="184" x2="292" y2="184" stroke="#2a2010" stroke-width="3" opacity="0.6"/>
+
+  <!-- Skewer 1 -->
+  <rect x="90" y="134" width="220" height="4" rx="2" fill="url(#skewer)" transform="rotate(-3 200 136)"/>
+  <!-- Paneer cubes on skewer 1 -->
+  <rect x="120" y="120" width="28" height="28" rx="4" fill="url(#paneer)" transform="rotate(-3 134 134)"/>
+  <circle cx="134" cy="132" r="8" fill="url(#charr)"/>
+  <rect x="158" y="118" width="28" height="28" rx="4" fill="url(#paneer)" transform="rotate(-3 172 132)"/>
+  <circle cx="172" cy="130" r="7" fill="url(#charr)"/>
+  <!-- Bell pepper on skewer 1 -->
+  <rect x="195" y="119" width="22" height="24" rx="4" fill="url(#pepper)" transform="rotate(-3 206 131)"/>
+  <rect x="226" y="117" width="28" height="28" rx="4" fill="url(#paneer)" transform="rotate(-3 240 131)"/>
+  <circle cx="240" cy="129" r="7" fill="url(#charr)"/>
+
+  <!-- Skewer 2 -->
+  <rect x="90" y="158" width="220" height="4" rx="2" fill="url(#skewer)" transform="rotate(2 200 160)"/>
+  <!-- Paneer cubes on skewer 2 -->
+  <rect x="115" y="144" width="28" height="28" rx="4" fill="#f0c870" transform="rotate(2 129 158)"/>
+  <circle cx="129" cy="156" r="7" fill="url(#charr)"/>
+  <!-- Green pepper -->
+  <rect x="152" y="143" width="22" height="24" rx="4" fill="#3a8818" transform="rotate(2 163 155)"/>
+  <rect x="182" y="143" width="28" height="28" rx="4" fill="url(#paneer)" transform="rotate(2 196 157)"/>
+  <circle cx="196" cy="155" r="8" fill="url(#charr)"/>
+  <rect x="218" y="142" width="22" height="24" rx="4" fill="#f08020" transform="rotate(2 229 154)"/>
+  <rect x="248" y="141" width="28" height="28" rx="4" fill="url(#paneer)" transform="rotate(2 262 155)"/>
+
+  <!-- Saffron marinade highlight -->
+  <path d="M120 125 Q155 118 195 122 Q230 116 265 120" fill="none" stroke="#e8a830" stroke-width="1" opacity="0.5" stroke-linecap="round"/>
+
+  <!-- Mint chutney cup -->
+  <ellipse cx="90" cy="170" rx="16" ry="10" fill="#1a5010" opacity="0.9"/>
+  <ellipse cx="90" cy="168" rx="13" ry="8" fill="#2a7018"/>
+  <circle cx="90" cy="168" r="5" fill="#3a8a20" opacity="0.7"/>
+
+  <!-- Onion rings garnish -->
+  <ellipse cx="318" cy="162" rx="15" ry="7" fill="none" stroke="#e8c8a0" stroke-width="1.5" opacity="0.7"/>
+  <ellipse cx="318" cy="162" rx="10" ry="4" fill="none" stroke="#e8c8a0" stroke-width="1" opacity="0.5"/>
+
+  <!-- Chaat masala sprinkle -->
+  <circle cx="175" cy="170" r="1.2" fill="#cc5820" opacity="0.7"/>
+  <circle cx="200" cy="167" r="1" fill="#cc5820" opacity="0.6"/>
+  <circle cx="225" cy="168" r="1.2" fill="#cc5820" opacity="0.7"/>
+
+  <!-- Label -->
+  <text x="200" y="228" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#e8a020" opacity="0.9" letter-spacing="0.3">Zafrani Paneer Tikka</text>
+  <text x="200" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#c8b89a" opacity="0.6" letter-spacing="1.5">TANDOOR &amp; GRILL</text>
+</svg>

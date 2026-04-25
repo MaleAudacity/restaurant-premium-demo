@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="600" height="500">
+  <defs>
+    <radialGradient id="heroGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#e8a020" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0c1a0f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="500" fill="#0c1a0f"/>
+  <rect width="600" height="500" fill="url(#heroGlow)"/>
+  <rect x="24" y="24" width="552" height="452" rx="24" fill="#111f15" stroke="#e8a020" stroke-width="1" stroke-opacity="0.25"/>
+  <!-- Large decorative plate -->
+  <circle cx="300" cy="220" r="120" fill="none" stroke="#e8a020" stroke-width="1" stroke-opacity="0.2"/>
+  <circle cx="300" cy="220" r="100" fill="none" stroke="#e8a020" stroke-width="1.5" stroke-opacity="0.35"/>
+  <circle cx="300" cy="220" r="75" fill="none" stroke="#e8a020" stroke-width="1" stroke-opacity="0.2"/>
+  <!-- Decorative food elements -->
+  <!-- Leaf / herb -->
+  <path d="M290 195 Q285 208 295 215 Q305 208 300 195 Q295 202 290 195Z" fill="none" stroke="#e8a020" stroke-width="1.2" stroke-opacity="0.5"/>
+  <path d="M305 200 Q300 213 310 220 Q320 213 315 200 Q310 207 305 200Z" fill="none" stroke="#e8a020" stroke-width="1.2" stroke-opacity="0.4"/>
+  <!-- Central flower -->
+  <circle cx="300" cy="220" r="12" fill="none" stroke="#c8b89a" stroke-width="1.2" stroke-opacity="0.45"/>
+  <circle cx="300" cy="220" r="5" fill="#e8a020" opacity="0.35"/>
+  <!-- Sauce drops -->
+  <circle cx="270" cy="240" r="3" fill="#e8a020" opacity="0.3"/>
+  <circle cx="332" cy="235" r="3" fill="#e8a020" opacity="0.3"/>
+  <circle cx="285" cy="255" r="2" fill="#c8b89a" opacity="0.3"/>
+  <!-- Fork silhouette -->
+  <line x1="180" y1="280" x2="180" y2="160" stroke="#c8b89a" stroke-width="1.5" stroke-opacity="0.25" stroke-linecap="round"/>
+  <path d="M170 160 Q180 178 190 160" fill="none" stroke="#c8b89a" stroke-width="1.5" stroke-opacity="0.25" stroke-linecap="round"/>
+  <!-- Knife -->
+  <line x1="420" y1="160" x2="420" y2="285" stroke="#c8b89a" stroke-width="1.5" stroke-opacity="0.25" stroke-linecap="round"/>
+  <path d="M415 160 L425 160 L420 195 Z" fill="none" stroke="#c8b89a" stroke-width="1.2" stroke-opacity="0.25"/>
+  <!-- Brand text area -->
+  <text x="300" y="370" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#e8a020" opacity="0.6" letter-spacing="4">MIRCH MASALA</text>
+  <text x="300" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#c8b89a" opacity="0.4" letter-spacing="3">PREMIUM INDIAN DINING</text>
+  <text x="300" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#c8b89a" opacity="0.3">Hero image — replace with restaurant photography</text>
+</svg>

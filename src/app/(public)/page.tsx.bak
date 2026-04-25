@@ -1,0 +1,51 @@
+import { getPublicLandingData } from "@/server/queries";
+import { featuredDishes } from "@/data/menu-data";
+import { HeroSection } from "@/components/sections/hero-section";
+import { MarqueeStrip } from "@/components/sections/marquee-strip";
+import { FeaturedDishesSection } from "@/components/sections/featured-dishes-section";
+import { IngredientsSection } from "@/components/sections/ingredients-section";
+import { BenefitsSection } from "@/components/sections/benefits-section";
+import { WhatsAppSection } from "@/components/sections/whatsapp-section";
+import { ChefSpecialsSection } from "@/components/sections/chef-specials-section";
+import { TestimonialsSection } from "@/components/sections/testimonials-section";
+import { CTASection } from "@/components/sections/cta-section";
+
+function Divider() {
+  return <div className="h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />;
+}
+
+export default async function HomePage() {
+  const { restaurant, heroStats } = await getPublicLandingData();
+
+  return (
+    <div>
+      <HeroSection
+        stats={heroStats}
+        tagline={restaurant.tagline ?? restaurant.description ?? ""}
+      />
+
+      <MarqueeStrip />
+
+      <Divider />
+      <FeaturedDishesSection dishes={featuredDishes} />
+
+      <Divider />
+      <IngredientsSection />
+
+      <Divider />
+      <BenefitsSection />
+
+      <Divider />
+      <WhatsAppSection />
+
+      <Divider />
+      <ChefSpecialsSection />
+
+      <Divider />
+      <TestimonialsSection />
+
+      <Divider />
+      <CTASection />
+    </div>
+  );
+}

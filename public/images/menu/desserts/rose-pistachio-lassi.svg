@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#1a0a14"/><stop offset="100%" stop-color="#0c1a0f"/></radialGradient>
+    <linearGradient id="lassi" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#ffeef8"/><stop offset="30%" stop-color="#f8d0ec"/><stop offset="70%" stop-color="#e8a8d8"/><stop offset="100%" stop-color="#c878b0"/></linearGradient>
+    <radialGradient id="glass" cx="45%" cy="30%" r="65%"><stop offset="0%" stop-color="#1e1428"/><stop offset="100%" stop-color="#100c18"/></radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <ellipse cx="200" cy="202" rx="48" ry="10" fill="#020008" opacity="0.7"/>
+  <!-- Copper/brass glass (matka style) -->
+  <!-- Glass body with slight taper -->
+  <path d="M162 192 Q156 160 158 128 Q160 108 175 100 Q188 95 200 95 Q212 95 225 100 Q240 108 242 128 Q244 160 238 192 Z" fill="#5a3010" opacity="0.5"/>
+  <path d="M164 190 Q158 160 160 130 Q162 110 176 103 Q188 98 200 98 Q212 98 224 103 Q238 110 240 130 Q242 160 236 190 Z" fill="url(#glass)"/>
+  <path d="M166 188 Q160 160 162 132 Q164 112 177 105 Q188 100 200 100 Q212 100 223 105 Q236 112 238 132 Q240 160 234 188 Z" fill="#14101e"/>
+  <!-- Glass rim (copper) -->
+  <ellipse cx="200" cy="100" rx="40" ry="8" fill="#7a4818" stroke="#aa6820" stroke-width="1.5" opacity="0.9"/>
+  <ellipse cx="200" cy="98" rx="37" ry="6" fill="#6a3a12"/>
+  <!-- Shine -->
+  <path d="M163 135 Q161 162 163 185" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.07" stroke-linecap="round"/>
+
+  <!-- Lassi liquid visible through glass -->
+  <path d="M166 188 Q160 160 162 132 Q164 115 177 107 Q188 102 200 102 Q212 102 223 107 Q236 115 238 132 Q240 155 236 185Z" fill="url(#lassi)" opacity="0.75"/>
+
+  <!-- Froth/foam on top -->
+  <ellipse cx="200" cy="102" rx="34" ry="7" fill="#fff8fc" opacity="0.9"/>
+  <ellipse cx="200" cy="101" rx="30" ry="5" fill="#ffffff" opacity="0.85"/>
+  <!-- Foam bubbles -->
+  <circle cx="188" cy="100" r="3" fill="#ffffff" opacity="0.7"/>
+  <circle cx="200" cy="99" r="4" fill="#ffffff" opacity="0.65"/>
+  <circle cx="212" cy="100" r="3" fill="#ffffff" opacity="0.7"/>
+  <circle cx="194" cy="102" r="2.5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="207" cy="102" r="2.5" fill="#ffffff" opacity="0.55"/>
+
+  <!-- Rose syrup drizzle on foam -->
+  <path d="M183 97 Q192 92 200 97 Q208 92 217 97" fill="none" stroke="#e83878" stroke-width="1.5" opacity="0.7" stroke-linecap="round"/>
+
+  <!-- Dried rose petals on rim -->
+  <path d="M172 94 Q177 87 183 91 Q179 97 173 95 Q171 95 172 94Z" fill="#e87888" opacity="0.75"/>
+  <path d="M218 92 Q223 85 229 89 Q225 95 219 93 Q217 93 218 92Z" fill="#f08898" opacity="0.65"/>
+
+  <!-- Pistachio slivers on foam -->
+  <ellipse cx="192" cy="97" rx="4" ry="1.8" fill="#3a8020" transform="rotate(-25 192 97)" opacity="0.85"/>
+  <ellipse cx="208" cy="96" rx="3.5" ry="1.5" fill="#4a9028" transform="rotate(15 208 96)" opacity="0.8"/>
+  <ellipse cx="200" cy="94" rx="3" ry="1.5" fill="#3a8020" transform="rotate(-10 200 94)" opacity="0.85"/>
+
+  <!-- Silver/gold vark on foam -->
+  <ellipse cx="196" cy="98" rx="4" ry="2" fill="#e8e0f0" opacity="0.4" transform="rotate(10 196 98)"/>
+
+  <!-- Condensation drops on glass -->
+  <circle cx="170" cy="145" r="2" fill="#e8d0f0" opacity="0.25"/>
+  <circle cx="167" cy="158" r="1.5" fill="#e8d0f0" opacity="0.2"/>
+  <circle cx="233" cy="148" r="1.8" fill="#e8d0f0" opacity="0.22"/>
+
+  <!-- Label -->
+  <text x="200" y="235" text-anchor="middle" font-family="Georgia, serif" font-size="12" font-weight="bold" fill="#e8a020" opacity="0.9" letter-spacing="0.3">Rose Pistachio Lassi</text>
+  <text x="200" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#c8b89a" opacity="0.6" letter-spacing="1.5">DESSERTS &amp; POUR</text>
+</svg>

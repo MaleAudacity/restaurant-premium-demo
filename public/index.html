@@ -1,0 +1,1790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mirch Masala – Premium Indian Dining, Bengaluru</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: oklch(9% 0.015 40);
+    --bg2: oklch(12% 0.018 38);
+    --bg3: oklch(15% 0.022 36);
+    --gold: oklch(74% 0.13 82);
+    --gold-dim: oklch(55% 0.09 82);
+    --red: oklch(52% 0.19 26);
+    --red-bright: oklch(60% 0.22 28);
+    --cream: oklch(95% 0.012 80);
+    --muted: oklch(55% 0.02 60);
+    --border: oklch(22% 0.025 40);
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--cream);
+    font-family: var(--sans);
+    font-weight: 300;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 60px;
+    height: 72px;
+    background: linear-gradient(to bottom, oklch(9% 0.015 40 / 0.95), transparent);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid oklch(100% 0 0 / 0.04);
+    transition: background 0.3s;
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 12px;
+    text-decoration: none;
+  }
+  .nav-logo-mark {
+    width: 38px; height: 38px;
+    background: var(--red);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif);
+    font-size: 18px; font-weight: 600;
+    color: var(--cream);
+    flex-shrink: 0;
+  }
+  .nav-logo-text {
+    font-family: var(--serif);
+    font-size: 20px; font-weight: 500;
+    color: var(--cream);
+    letter-spacing: 0.02em;
+  }
+  .nav-logo-text span { color: var(--gold); }
+  .nav-links { display: flex; align-items: center; gap: 36px; }
+  .nav-links a {
+    text-decoration: none; color: var(--muted);
+    font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase;
+    font-weight: 400;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--cream); }
+  .nav-cta {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .btn-ghost {
+    padding: 9px 22px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--cream);
+    font-family: var(--sans);
+    font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+    border-radius: 2px;
+  }
+  .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+  .btn-primary {
+    padding: 10px 24px;
+    background: var(--red);
+    color: var(--cream);
+    font-family: var(--sans);
+    font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s;
+    border-radius: 2px;
+  }
+  .btn-primary:hover { background: var(--red-bright); }
+
+  /* ─── HERO ─── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image: url('https://mirch.ai-workflows.cloud/images/hero/hero.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    filter: brightness(0.3) saturate(0.8);
+    transform: scale(1.05);
+    animation: slowzoom 20s ease-in-out infinite alternate;
+  }
+  @keyframes slowzoom {
+    from { transform: scale(1.05); }
+    to { transform: scale(1.12); }
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(
+      160deg,
+      oklch(9% 0.015 40 / 0.2) 0%,
+      oklch(9% 0.015 40 / 0.55) 50%,
+      oklch(9% 0.015 40 / 0.9) 100%
+    );
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    text-align: center;
+    max-width: 900px;
+    padding: 0 40px;
+    animation: fadeUp 1.2s ease both;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-eyebrow {
+    font-size: 11px; letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+    font-weight: 400;
+    animation: fadeUp 1.2s 0.1s ease both;
+  }
+  .hero-title {
+    font-family: var(--serif);
+    font-size: clamp(64px, 8vw, 108px);
+    font-weight: 300;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    margin-bottom: 28px;
+    color: var(--cream);
+    animation: fadeUp 1.2s 0.2s ease both;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .hero-subtitle {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-style: italic;
+    color: oklch(75% 0.025 80);
+    margin-bottom: 48px;
+    font-weight: 300;
+    animation: fadeUp 1.2s 0.3s ease both;
+  }
+  .hero-actions {
+    display: flex; align-items: center; justify-content: center; gap: 16px;
+    flex-wrap: wrap;
+    animation: fadeUp 1.2s 0.4s ease both;
+  }
+  .btn-large {
+    padding: 15px 36px;
+    font-family: var(--sans);
+    font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.25s;
+  }
+  .btn-large.primary {
+    background: var(--red); color: var(--cream);
+    border: 1px solid var(--red);
+  }
+  .btn-large.primary:hover { background: var(--red-bright); border-color: var(--red-bright); }
+  .btn-large.outline {
+    background: transparent; color: var(--cream);
+    border: 1px solid oklch(100% 0 0 / 0.3);
+  }
+  .btn-large.outline:hover { border-color: var(--gold); color: var(--gold); }
+  .hero-stats {
+    position: absolute; bottom: 48px; left: 0; right: 0;
+    display: flex; justify-content: center; gap: 60px;
+    z-index: 2;
+    animation: fadeUp 1.2s 0.6s ease both;
+  }
+  .stat { text-align: center; }
+  .stat-num {
+    font-family: var(--serif);
+    font-size: 36px; font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--muted); margin-top: 6px;
+  }
+
+  /* ─── TICKER ─── */
+  .ticker-wrap {
+    overflow: hidden;
+    background: var(--red);
+    padding: 14px 0;
+    border-top: 1px solid oklch(100%0 0/0.1);
+    border-bottom: 1px solid oklch(0% 0 0/0.2);
+  }
+  .ticker-track {
+    display: flex; gap: 0;
+    width: max-content;
+    animation: ticker 35s linear infinite;
+  }
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .ticker-item {
+    white-space: nowrap;
+    font-family: var(--serif);
+    font-size: 15px; font-weight: 400;
+    color: var(--cream);
+    padding: 0 28px;
+    letter-spacing: 0.04em;
+    opacity: 0.92;
+  }
+  .ticker-dot {
+    font-size: 10px; opacity: 0.5;
+    padding: 0 8px;
+  }
+
+  /* ─── SECTION SHARED ─── */
+  section { padding: 120px 60px; }
+  .section-eyebrow {
+    font-size: 10px; letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 20px; font-weight: 400;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(40px, 4.5vw, 68px);
+    font-weight: 300; line-height: 1.05;
+    letter-spacing: -0.01em;
+  }
+  .section-body {
+    font-size: 15px; line-height: 1.75; color: var(--muted);
+    max-width: 520px; font-weight: 300;
+    margin-top: 18px;
+  }
+  .rule { width: 48px; height: 1px; background: var(--gold); margin: 24px 0; }
+
+  /* ─── DISHES ─── */
+  .dishes-section { background: var(--bg2); }
+  .dishes-header {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    margin-bottom: 64px;
+  }
+  .dishes-header a {
+    font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold); text-decoration: none;
+    border-bottom: 1px solid var(--gold-dim);
+    padding-bottom: 2px;
+    transition: color 0.2s;
+  }
+  .dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+  .dish-card {
+    position: relative; overflow: hidden;
+    aspect-ratio: 3/4;
+    cursor: pointer;
+    group: true;
+  }
+  .dish-card img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease, filter 0.4s;
+    filter: brightness(0.75) saturate(0.9);
+  }
+  .dish-card:hover img {
+    transform: scale(1.06);
+    filter: brightness(0.85) saturate(1.1);
+  }
+  .dish-card-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, oklch(5% 0.02 30 / 0.9) 0%, transparent 50%);
+  }
+  .dish-card-body {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 32px 28px;
+    transform: translateY(8px);
+    transition: transform 0.4s;
+  }
+  .dish-card:hover .dish-card-body { transform: translateY(0); }
+  .dish-badge {
+    display: inline-block;
+    background: var(--red);
+    color: var(--cream);
+    font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+    padding: 4px 10px; margin-bottom: 10px;
+    border-radius: 1px;
+  }
+  .dish-name {
+    font-family: var(--serif);
+    font-size: 26px; font-weight: 400;
+    color: var(--cream); line-height: 1.15;
+    margin-bottom: 6px;
+  }
+  .dish-desc {
+    font-size: 13px; color: oklch(75% 0.02 80);
+    line-height: 1.55;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.4s 0.05s, transform 0.4s 0.05s;
+  }
+  .dish-card:hover .dish-desc { opacity: 1; transform: translateY(0); }
+  .dish-price {
+    font-family: var(--serif);
+    font-size: 20px; color: var(--gold);
+    margin-top: 10px; display: block;
+  }
+  .dish-card.large { grid-row: span 2; aspect-ratio: unset; }
+
+  /* ─── CRAFT / STORY ─── */
+  .craft-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .craft-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 260px 180px;
+    gap: 8px;
+  }
+  .craft-img {
+    overflow: hidden;
+    border-radius: 2px;
+  }
+  .craft-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: saturate(0.85) brightness(0.9);
+    transition: transform 0.5s;
+  }
+  .craft-img:hover img { transform: scale(1.04); }
+  .craft-img.tall { grid-row: span 2; }
+  .craft-pillars {
+    display: flex; gap: 8px; flex-wrap: wrap;
+    margin-top: 32px;
+  }
+  .craft-pill {
+    font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 8px 16px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    border-radius: 50px;
+  }
+  .craft-nums {
+    display: flex; gap: 48px; margin-top: 40px;
+  }
+  .craft-num { }
+  .craft-num-val {
+    font-family: var(--serif);
+    font-size: 44px; font-weight: 300;
+    color: var(--cream); line-height: 1;
+  }
+  .craft-num-unit {
+    font-family: var(--serif);
+    font-size: 22px; color: var(--gold);
+  }
+  .craft-num-label {
+    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--muted); margin-top: 6px;
+  }
+
+  /* ─── WHATSAPP SECTION ─── */
+  .wa-section {
+    background: var(--bg3);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+  }
+  .wa-phone {
+    position: relative;
+    display: flex; justify-content: center;
+  }
+  .phone-frame {
+    width: 280px;
+    background: oklch(14% 0.02 38);
+    border-radius: 40px;
+    border: 2px solid var(--border);
+    overflow: hidden;
+    box-shadow: 0 40px 80px oklch(0% 0 0 / 0.5), 0 0 0 1px oklch(100% 0 0 / 0.05);
+    position: relative;
+  }
+  .phone-notch {
+    width: 80px; height: 24px;
+    background: oklch(10% 0.015 38);
+    border-radius: 0 0 16px 16px;
+    margin: 0 auto;
+    position: relative; z-index: 2;
+  }
+  .phone-screen {
+    background: #0a1628;
+    padding: 0;
+    min-height: 500px;
+  }
+  .wa-header {
+    background: #1f2c34;
+    padding: 12px 16px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .wa-avatar {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--red);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif); font-size: 16px; color: var(--cream); font-weight: 500;
+    flex-shrink: 0;
+  }
+  .wa-header-info { flex: 1; }
+  .wa-name { font-size: 13px; color: #e9edef; font-weight: 500; font-family: var(--sans); }
+  .wa-status { font-size: 11px; color: #8696a0; font-family: var(--sans); }
+  .wa-chat { padding: 16px 12px; display: flex; flex-direction: column; gap: 10px; }
+  .wa-bubble {
+    max-width: 85%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 12px; line-height: 1.5;
+    font-family: var(--sans);
+  }
+  .wa-bubble.incoming {
+    background: #202c33; color: #e9edef;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+  }
+  .wa-bubble.outgoing {
+    background: #005c4b; color: #e9edef;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+  }
+  .wa-time { font-size: 10px; color: #8696a0; margin-top: 3px; text-align: right; }
+  .wa-input {
+    background: #1f2c34;
+    padding: 10px 14px;
+    display: flex; align-items: center; gap: 8px;
+    border-top: 1px solid oklch(100% 0 0 / 0.05);
+  }
+  .wa-input-field {
+    flex: 1; background: #2a3942; border-radius: 20px;
+    padding: 8px 14px; font-size: 12px; color: #8696a0;
+    font-family: var(--sans);
+  }
+
+  .wa-steps { }
+  .wa-step {
+    display: flex; gap: 20px; padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .wa-step:last-child { border-bottom: none; }
+  .step-num {
+    font-family: var(--serif);
+    font-size: 52px; font-weight: 300;
+    color: var(--border);
+    line-height: 1;
+    flex-shrink: 0; width: 48px;
+    transition: color 0.3s;
+  }
+  .wa-step:hover .step-num { color: var(--gold); }
+  .step-title {
+    font-family: var(--serif);
+    font-size: 22px; color: var(--cream);
+    margin-bottom: 6px;
+  }
+  .step-desc { font-size: 14px; color: var(--muted); line-height: 1.65; }
+  .wa-cta {
+    margin-top: 40px; display: flex; gap: 14px; flex-wrap: wrap;
+  }
+
+  /* ─── TESTIMONIALS ─── */
+  .reviews-section { background: var(--bg); }
+  .reviews-header {
+    text-align: center; margin-bottom: 72px;
+  }
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .review-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    padding: 32px 28px;
+    border-radius: 4px;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .review-card:hover {
+    border-color: var(--gold-dim);
+    transform: translateY(-4px);
+  }
+  .review-stars {
+    display: flex; gap: 3px; margin-bottom: 20px;
+  }
+  .star { width: 12px; height: 12px; fill: var(--gold); }
+  .review-text {
+    font-family: var(--serif);
+    font-size: 16px; line-height: 1.7;
+    color: oklch(82% 0.015 70);
+    font-style: italic; font-weight: 300;
+    margin-bottom: 24px;
+  }
+  .review-author {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .review-avatar {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--bg3);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif); font-size: 14px; color: var(--gold);
+    border: 1px solid var(--border); flex-shrink: 0;
+  }
+  .review-name { font-size: 13px; font-weight: 400; color: var(--cream); }
+  .review-meta { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+  /* ─── FEATURES ─── */
+  .features-section {
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+  }
+  .features-header { text-align: center; margin-bottom: 72px; }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .feature-card {
+    background: var(--bg2);
+    padding: 48px 40px;
+    transition: background 0.3s;
+  }
+  .feature-card:hover { background: var(--bg3); }
+  .feature-icon {
+    width: 48px; height: 48px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 24px;
+    font-size: 20px;
+  }
+  .feature-title {
+    font-family: var(--serif);
+    font-size: 22px; color: var(--cream);
+    margin-bottom: 12px;
+  }
+  .feature-desc { font-size: 14px; color: var(--muted); line-height: 1.7; }
+  .feature-metric {
+    margin-top: 24px;
+    font-family: var(--serif);
+    font-size: 36px; font-weight: 300; color: var(--gold);
+  }
+  .feature-metric-label { font-size: 11px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; }
+
+  /* ─── CTA ─── */
+  .cta-section {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    padding: 140px 60px;
+  }
+  .cta-bg {
+    position: absolute; inset: 0;
+    background-image: url('https://mirch.ai-workflows.cloud/images/menu/grill/bhatti-ka-jheenga.jpg');
+    background-size: cover; background-position: center;
+    filter: brightness(0.2) saturate(0.6);
+  }
+  .cta-overlay {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at center, oklch(9% 0.015 40 / 0.3) 0%, oklch(9% 0.015 40 / 0.85) 100%);
+  }
+  .cta-content { position: relative; z-index: 2; }
+  .cta-eyebrow {
+    font-size: 11px; letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 24px;
+  }
+  .cta-title {
+    font-family: var(--serif);
+    font-size: clamp(48px, 6vw, 84px);
+    font-weight: 300; line-height: 1.05;
+    max-width: 700px; margin: 0 auto 32px;
+  }
+  .cta-title em { font-style: italic; color: var(--gold); }
+  .cta-sub {
+    font-family: var(--serif);
+    font-size: 17px; font-style: italic;
+    color: var(--muted); margin-bottom: 48px;
+  }
+  .cta-actions {
+    display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;
+  }
+  .cta-info {
+    display: flex; justify-content: center; gap: 36px; flex-wrap: wrap;
+    margin-top: 48px;
+  }
+  .cta-info-item {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 12px; letter-spacing: 0.08em; color: var(--muted);
+  }
+  .cta-info-dot { width: 4px; height: 4px; background: var(--gold); border-radius: 50%; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: oklch(7% 0.012 38);
+    border-top: 1px solid var(--border);
+    padding: 72px 60px 48px;
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 60px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .footer-brand-name {
+    font-family: var(--serif);
+    font-size: 28px; font-weight: 400;
+    color: var(--cream); margin-bottom: 6px;
+  }
+  .footer-tagline {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 15px; color: var(--muted);
+    margin-bottom: 24px;
+  }
+  .footer-address {
+    font-size: 13px; color: var(--muted); line-height: 1.8;
+  }
+  .footer-hours {
+    margin-top: 16px; font-size: 13px; color: var(--muted); line-height: 1.8;
+  }
+  .footer-col-title {
+    font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 20px;
+  }
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 12px; }
+  .footer-links a {
+    text-decoration: none; color: var(--muted);
+    font-size: 14px; transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--cream); }
+  .footer-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-copy { font-size: 12px; color: oklch(35% 0.02 50); }
+  .footer-legal { display: flex; gap: 24px; }
+  .footer-legal a {
+    font-size: 12px; color: oklch(35% 0.02 50);
+    text-decoration: none; transition: color 0.2s;
+  }
+  .footer-legal a:hover { color: var(--muted); }
+
+  /* ─── SCROLL ANIMATIONS ─── */
+  .reveal {
+    opacity: 0; transform: translateY(32px);
+    transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1);
+  }
+  .reveal.visible {
+    opacity: 1; transform: translateY(0);
+  }
+  .reveal-delay-1 { transition-delay: 0.12s; }
+  .reveal-delay-2 { transition-delay: 0.24s; }
+  .reveal-delay-3 { transition-delay: 0.36s; }
+  .reveal-delay-4 { transition-delay: 0.48s; }
+
+  .dish-card {
+    opacity: 0;
+    transform: translateY(40px) scale(0.97);
+    transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1);
+  }
+  .dish-card.visible { opacity: 1; transform: translateY(0) scale(1); }
+
+  .rule {
+    width: 0;
+    transition: width 0.9s cubic-bezier(0.22,1,0.36,1) 0.3s;
+  }
+  .rule.visible { width: 48px; }
+
+  .craft-img {
+    opacity: 0; transform: scale(0.94);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .craft-img.visible { opacity: 1; transform: scale(1); }
+  .craft-img:nth-child(2) { transition-delay: 0.15s; }
+  .craft-img:nth-child(3) { transition-delay: 0.3s; }
+
+  .feature-card {
+    opacity: 0; transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .feature-card.visible { opacity: 1; transform: translateY(0); }
+
+  .review-card {
+    opacity: 0; transform: translateY(28px) scale(0.97);
+    transition: opacity 0.65s ease, transform 0.65s ease, border-color 0.3s, box-shadow 0.3s;
+  }
+  .review-card.visible { opacity: 1; transform: translateY(0) scale(1); }
+  .review-card:hover { box-shadow: 0 8px 32px oklch(0% 0 0 / 0.4); }
+
+  .wa-step {
+    opacity: 0; transform: translateX(-20px);
+    transition: opacity 0.7s ease, transform 0.7s ease, border-color 0.3s;
+  }
+  .wa-step.visible { opacity: 1; transform: translateX(0); }
+
+  @keyframes goldPulse {
+    0%, 100% { text-shadow: 0 0 0 transparent; }
+    50% { text-shadow: 0 0 20px oklch(74% 0.13 82 / 0.5); }
+  }
+  .stat-num.counting { animation: goldPulse 1s ease; }
+
+  .craft-num-val { display: inline-block; }
+
+  .spice-particle {
+    position: absolute;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    opacity: 0;
+    pointer-events: none;
+    animation: floatUp var(--dur, 4s) var(--delay, 0s) ease-in infinite;
+  }
+  @keyframes floatUp {
+    0%   { opacity: 0; transform: translateY(0) scale(0.5) rotate(0deg); }
+    15%  { opacity: 0.6; }
+    85%  { opacity: 0.15; }
+    100% { opacity: 0; transform: translateY(-120px) scale(1.2) rotate(180deg); }
+  }
+
+  .phone-frame {
+    opacity: 0; transform: translateY(30px) rotateX(6deg);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+    transform-origin: top center;
+  }
+  .phone-frame.visible { opacity: 1; transform: translateY(0) rotateX(0deg); }
+
+  .wa-bubble { opacity: 0; transform: translateY(8px) scale(0.96); }
+  .wa-bubble.show {
+    opacity: 1; transform: translateY(0) scale(1);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+  }
+
+  .hero-title .char {
+    display: inline-block;
+    opacity: 0; transform: translateY(40px) rotate(3deg);
+    animation: charIn 0.6s cubic-bezier(0.22,1,0.36,1) both;
+  }
+  @keyframes charIn {
+    to { opacity: 1; transform: translateY(0) rotate(0deg); }
+  }
+
+  #curtain {
+    position: fixed; inset: 0; z-index: 9998;
+    background: var(--bg);
+    display: flex; align-items: center; justify-content: center;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+  }
+  #curtain.gone { opacity: 0; visibility: hidden; }
+  .curtain-logo {
+    font-family: var(--serif);
+    font-size: 52px; font-weight: 300;
+    color: var(--cream);
+    animation: curtainPulse 1.2s ease infinite alternate;
+  }
+  .curtain-logo span { color: var(--gold); }
+  @keyframes curtainPulse {
+    from { opacity: 0.4; letter-spacing: 0.02em; }
+    to { opacity: 1; letter-spacing: 0.08em; }
+  }
+
+  .dish-card::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 80%, var(--gold) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+    mix-blend-mode: soft-light;
+  }
+  .dish-card:hover::after { opacity: 0.18; }
+
+  .ticker-wrap:hover .ticker-track { animation-play-state: paused; }
+
+  .btn-primary, .btn-large.primary {
+    position: relative; overflow: hidden;
+  }
+  .btn-primary::after, .btn-large.primary::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 60%; height: 100%;
+    background: linear-gradient(90deg, transparent, oklch(100% 0 0 / 0.15), transparent);
+    transform: skewX(-20deg);
+    transition: left 0s;
+  }
+  .btn-primary:hover::after, .btn-large.primary:hover::after {
+    left: 160%;
+    transition: left 0.5s ease;
+  }
+
+  /* ─── TWEAKS PANEL ─── */
+  #tweaks-panel {
+    display: none;
+    position: fixed; bottom: 24px; right: 24px; z-index: 9999;
+    background: oklch(13% 0.02 38);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    width: 240px;
+    box-shadow: 0 20px 60px oklch(0% 0 0 / 0.5);
+  }
+  #tweaks-panel h4 {
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 16px;
+  }
+  .tweak-row { margin-bottom: 14px; }
+  .tweak-label { font-size: 11px; color: var(--muted); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .tweak-row select, .tweak-row input[type=range] {
+    width: 100%; background: var(--bg3);
+    border: 1px solid var(--border);
+    color: var(--cream); padding: 6px 10px;
+    border-radius: 2px; font-family: var(--sans); font-size: 12px;
+    cursor: pointer;
+  }
+  .tweak-swatches { display: flex; gap: 8px; }
+  .tweak-swatch {
+    width: 24px; height: 24px; border-radius: 50%;
+    cursor: pointer; border: 2px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .tweak-swatch.active { border-color: var(--cream); }
+
+  /* ─── HAMBURGER ─── */
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 6px;
+    background: none;
+    border: none;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 22px; height: 2px;
+    background: var(--cream);
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .mobile-menu {
+    display: none;
+    position: fixed; top: 72px; left: 0; right: 0; z-index: 99;
+    background: oklch(10% 0.016 38 / 0.98);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    padding: 24px;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    text-decoration: none; color: var(--muted);
+    font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase;
+    font-weight: 400;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    transition: color 0.2s;
+  }
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu a:hover { color: var(--cream); }
+
+  /* ─── TABLET (≤ 900px) ─── */
+  @media (max-width: 900px) {
+    nav { padding: 0 24px; }
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+    .nav-cta .btn-ghost { display: none; }
+
+    section { padding: 80px 24px; }
+
+    .hero-stats { gap: 28px; bottom: 32px; }
+    .stat-num { font-size: 28px; }
+
+    .dishes-grid { grid-template-columns: 1fr 1fr; gap: 2px; }
+    .dish-card.large { grid-row: auto; aspect-ratio: 3/4; }
+
+    .craft-section { grid-template-columns: 1fr; gap: 48px; }
+    .craft-images { grid-template-rows: 220px 160px; }
+
+    .wa-section { grid-template-columns: 1fr; gap: 56px; padding: 80px 24px; }
+    .wa-phone { order: -1; }
+
+    .reviews-grid { grid-template-columns: 1fr 1fr; }
+
+    .features-grid { grid-template-columns: 1fr; }
+
+    .cta-section { padding: 100px 24px; }
+
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+  }
+
+  /* ─── LARGE PHONE (≤ 640px) ─── */
+  @media (max-width: 640px) {
+    nav { height: 64px; padding: 0 16px; }
+    .mobile-menu { top: 64px; }
+    .nav-logo-text { font-size: 16px; }
+    .nav-logo-mark { width: 34px; height: 34px; font-size: 15px; }
+
+    /* ── Hero text fix ── */
+    .hero-content { padding: 0 20px; }
+    .hero-title {
+      font-size: clamp(38px, 10vw, 56px);
+      line-height: 1.04;
+      letter-spacing: -0.015em;
+      hyphens: none;
+      word-break: keep-all;
+      overflow-wrap: normal;
+    }
+    .hero-eyebrow {
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      margin-bottom: 18px;
+      /* wrap eyebrow on two lines cleanly */
+      max-width: 280px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+    .hero-subtitle { font-size: 14px; margin-bottom: 32px; line-height: 1.55; max-width: 280px; margin-left: auto; margin-right: auto; }
+    .hero-actions { gap: 10px; flex-direction: column; align-items: center; }
+    .btn-large { padding: 14px 32px; font-size: 11px; width: 100%; max-width: 280px; text-align: center; }
+    .hero-stats {
+      gap: 20px;
+      bottom: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 20px;
+    }
+    .stat-num { font-size: 24px; }
+    .stat-label { font-size: 9px; }
+
+    .ticker-item { font-size: 13px; padding: 0 18px; }
+
+    section { padding: 64px 20px; }
+    .section-title {
+      font-size: clamp(32px, 8.5vw, 48px);
+      hyphens: none;
+      word-break: keep-all;
+    }
+
+    .dishes-grid { grid-template-columns: 1fr; }
+    .dish-card { aspect-ratio: 4/3; }
+    .dish-card.large { aspect-ratio: 4/3; }
+    .dish-name { font-size: 22px; }
+
+    .craft-images { grid-template-columns: 1fr; grid-template-rows: 220px 180px 180px; }
+    .craft-img.tall { grid-row: auto; }
+    .craft-nums { gap: 28px; }
+    .craft-num-val { font-size: 36px; }
+
+    .wa-section { gap: 40px; }
+    .phone-frame { width: 240px; }
+
+    .reviews-grid { grid-template-columns: 1fr; }
+
+    .feature-card { padding: 32px 24px; }
+
+    .cta-section { padding: 80px 20px; }
+    .cta-title {
+      font-size: clamp(32px, 9vw, 56px);
+      hyphens: none;
+      word-break: keep-all;
+    }
+    .cta-info { gap: 16px; flex-direction: column; align-items: center; }
+
+    .footer-top { grid-template-columns: 1fr; gap: 32px; }
+    footer { padding: 56px 20px 40px; }
+    .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+    .footer-legal { justify-content: center; }
+  }
+
+  /* ─── SMALL PHONE (≤ 390px) ─── */
+  @media (max-width: 390px) {
+    .hero-title {
+      font-size: clamp(34px, 9.5vw, 48px);
+      hyphens: none;
+      word-break: keep-all;
+    }
+    .hero-stats { gap: 14px; }
+    .stat { min-width: 72px; }
+    .stat-num { font-size: 22px; }
+    .btn-large { padding: 13px 24px; }
+    .section-title { font-size: clamp(28px, 9vw, 44px); }
+    .craft-nums { flex-direction: column; gap: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- PAGE CURTAIN -->
+<div id="curtain">
+  <div class="curtain-logo">Mirch <span>Masala</span></div>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-mark">M</div>
+    <div class="nav-logo-text">Mirch <span>Masala</span></div>
+  </a>
+  <div class="nav-links">
+    <a href="#dishes">Menu</a>
+    <a href="#craft">Our Craft</a>
+    <a href="#booking">Booking</a>
+    <a href="#reviews">Reviews</a>
+  </div>
+  <div class="nav-cta">
+    <a href="/api/auth/signin" class="btn-ghost" id="customer-signin-btn">Sign In</a>
+    <a href="#booking" class="btn-primary">Reserve Table</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#dishes" class="mobile-link">Menu</a>
+  <a href="#craft" class="mobile-link">Our Craft</a>
+  <a href="#booking" class="mobile-link">Booking</a>
+  <a href="#reviews" class="mobile-link">Reviews</a>
+  <a href="/api/auth/signin" class="mobile-link" id="mobile-signin-btn">Sign In</a>
+  <a href="#booking" class="mobile-link" style="color:var(--gold)">Reserve Table →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">बेहतरीन भारतीय खाना &nbsp;·&nbsp; Premium Indian Dining, Bengaluru</p>
+    <h1 class="hero-title">Bold <em>flavours,</em><br>seamless experiences.</h1>
+    <p class="hero-subtitle">दिल से बना, शान से परसा — Crafted with heart, served with pride</p>
+    <div class="hero-actions">
+      <a href="#booking" class="btn-large primary">Reserve a Table</a>
+      <a href="#dishes" class="btn-large outline">Explore the Menu</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">4.9</div>
+      <div class="stat-label">Average Rating</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">18k+</div>
+      <div class="stat-label">Orders Fulfilled</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">320+</div>
+      <div class="stat-label">Private Events</div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span class="ticker-item">Dum Biryani</span><span class="ticker-dot">…</span>
+    <span class="ticker-item">Truffle Dahi Puri</span><span class="ticker-dot">…</span>
+    <span class="ticker-item">Gunpowder Prawns</span><span class="ticker-dot">…</span>
+    <span class="ticker-item">Murgh Makhmali Kebab</span><span class="ticker-dot">…</span>
+    <span class="ticker-item">Butter Chicken</span><span class="ticker-dot">…</span>
+    <span class="ticker-item">Nalli Nihari</span><span class="ticker-dot">…</span>
+    <span class="ticker-item">Saffron Tres Leches Rasmalai</span><span class="ticker-dot">…</span>
+    <span class="ticker-item">Paneer Tikka</span><span class="ticker-dot">…</span>
+    <span class="ticker-item">Dal Bukhara</span><span class="ticker-dot">…</span>
+    <span class="ticker-item">Tandoori Prawns</span><span class="ticker-dot">…</span>
+    <span class="ticker-item">Lotus Stem Chaat</span><span class="ticker-dot">…</span>
+    <span class="ticker-item">Shahi Lassi</span><span class="ticker-dot">…</span>
+    <!-- Duplicate for seamless loop -->
+    <span class="ticker-item">Dum Biryani</span><span class="ticker-dot">…</span>
+    <span class="ticker-item">Truffle Dahi Puri</span><span class="ticker-dot">…</span>
+    <span class="ticker-item">Gunpowder Prawns</span><span class="ticker-dot">…</span>
+    <span class="ticker-item">Murgh Makhmali Kebab</span><span class="ticker-dot">…</span>
+    <span class="ticker-item">Butter Chicken</span><span class="ticker-dot">…</span>
+    <span class="ticker-item">Nalli Nihari</span><span class="ticker-dot">…</span>
+    <span class="ticker-item">Saffron Tres Leches Rasmalai</span><span class="ticker-dot">…</span>
+    <span class="ticker-item">Paneer Tikka</span><span class="ticker-dot">…</span>
+    <span class="ticker-item">Dal Bukhara</span><span class="ticker-dot">…</span>
+    <span class="ticker-item">Tandoori Prawns</span><span class="ticker-dot">…</span>
+    <span class="ticker-item">Lotus Stem Chaat</span><span class="ticker-dot">…</span>
+    <span class="ticker-item">Shahi Lassi</span><span class="ticker-dot">…</span>
+  </div>
+</div>
+
+<!-- DISHES -->
+<section class="dishes-section" id="dishes">
+  <div class="dishes-header reveal">
+    <div>
+      <p class="section-eyebrow">Chef's Selection</p>
+      <h2 class="section-title">Guest favourites &<br><em style="font-style:italic; font-family: var(--serif)">signature plates</em></h2>
+    </div>
+    <a href="/menu" target="_blank">View Full Menu →</a>
+  </div>
+  <div class="dishes-grid">
+    <!-- Large feature card -->
+    <div class="dish-card large reveal">
+      <img src="https://mirch.ai-workflows.cloud/images/menu/biryani/saffron-murgh-dum-biryani.jpg" alt="Saffron Murgh Dum Biryani" loading="lazy">
+      <div class="dish-card-overlay"></div>
+      <div class="dish-card-body">
+        <span class="dish-badge">Bestseller</span>
+        <div class="dish-name">Saffron Murgh<br>Dum Biryani</div>
+        <div class="dish-desc">Free-range chicken marinated in yoghurt and whole spices, slow-cooked dum style with saffron-steeped basmati.</div>
+        <span class="dish-price">₹ 899</span>
+      </div>
+    </div>
+    <div class="dish-card reveal reveal-delay-1">
+      <img src="https://mirch.ai-workflows.cloud/images/menu/starters/truffle-dahi-puri.jpg" alt="Truffle Dahi Puri" loading="lazy">
+      <div class="dish-card-overlay"></div>
+      <div class="dish-card-body">
+        <span class="dish-badge">Signature</span>
+        <div class="dish-name">Truffle Dahi Puri</div>
+        <div class="dish-desc">Whipped truffle yoghurt, tamarind gel, pomegranate pearls.</div>
+        <span class="dish-price">₹ 649</span>
+      </div>
+    </div>
+    <div class="dish-card reveal reveal-delay-2">
+      <img src="https://mirch.ai-workflows.cloud/images/menu/starters/gunpowder-prawns.jpg" alt="Gunpowder Prawns" loading="lazy">
+      <div class="dish-card-overlay"></div>
+      <div class="dish-card-body">
+        <span class="dish-badge">Bestseller</span>
+        <div class="dish-name">Gunpowder Prawns</div>
+        <div class="dish-desc">Tiger prawns, house gunpowder spice, curry leaf butter.</div>
+        <span class="dish-price">₹ 899</span>
+      </div>
+    </div>
+    <div class="dish-card reveal reveal-delay-1">
+      <img src="https://mirch.ai-workflows.cloud/images/menu/curries/butter-chicken.jpg" alt="Butter Chicken" loading="lazy">
+      <div class="dish-card-overlay"></div>
+      <div class="dish-card-body">
+        <span class="dish-badge">Classic</span>
+        <div class="dish-name">Butter Chicken</div>
+        <div class="dish-desc">Velvety tomato-fenugreek sauce, cultured butter, single cream.</div>
+        <span class="dish-price">₹ 799</span>
+      </div>
+    </div>
+    <div class="dish-card reveal reveal-delay-2">
+      <img src="https://mirch.ai-workflows.cloud/images/menu/desserts/saffron-tres-leches-rasmalai.jpg" alt="Rasmalai" loading="lazy">
+      <div class="dish-card-overlay"></div>
+      <div class="dish-card-body">
+        <span class="dish-badge">Dessert</span>
+        <div class="dish-name">Tres Leches Rasmalai</div>
+        <div class="dish-desc">Three-milk saffron-cardamom syrup, pistachio crumble, rose gold leaf.</div>
+        <span class="dish-price">₹ 549</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CRAFT -->
+<section id="craft" style="padding: 120px 60px;">
+  <div class="craft-section">
+    <div class="craft-images reveal">
+      <div class="craft-img tall">
+        <img src="https://mirch.ai-workflows.cloud/images/menu/grill/lamb-gilafi-kebab.jpg" alt="Lamb Gilafi Kebab" loading="lazy">
+      </div>
+      <div class="craft-img">
+        <img src="https://mirch.ai-workflows.cloud/images/menu/starters/lotus-stem-chaat.jpg" alt="Lotus Stem Chaat" loading="lazy">
+      </div>
+      <div class="craft-img">
+        <img src="https://mirch.ai-workflows.cloud/images/menu/grill/bhatti-ka-jheenga.jpg" alt="Bhatti Ka Jheenga" loading="lazy">
+      </div>
+    </div>
+    <div class="reveal reveal-delay-2">
+      <p class="section-eyebrow">The Craft</p>
+      <h2 class="section-title">Sourced Fresh.<br><em style="font-style:italic; font-family:var(--serif)">Cooked Bold.</em></h2>
+      <div class="rule"></div>
+      <p class="section-body">Every dish at Mirch Masala begins with hand-picked produce, whole spices, and the kind of patience that can't be rushed. From morning prep to the last plate of the night — the kitchen runs on craft.</p>
+      <div class="craft-pillars">
+        <span class="craft-pill">Whole Spices</span>
+        <span class="craft-pill">Open Flame</span>
+        <span class="craft-pill">Zero Shortcuts</span>
+        <span class="craft-pill">Daily Fresh</span>
+        <span class="craft-pill">Farm to Plate</span>
+      </div>
+      <div class="craft-nums">
+        <div class="craft-num">
+          <div class="craft-num-val">12<span class="craft-num-unit">+</span></div>
+          <div class="craft-num-label">House spice blends</div>
+        </div>
+        <div class="craft-num">
+          <div class="craft-num-val">0</div>
+          <div class="craft-num-label">Shortcuts taken</div>
+        </div>
+        <div class="craft-num">
+          <div class="craft-num-val">Daily</div>
+          <div class="craft-num-label">Fresh sourcing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHATSAPP BOOKING -->
+<section class="wa-section" id="booking">
+  <div>
+    <p class="section-eyebrow reveal">WhatsApp Booking</p>
+    <h2 class="section-title reveal">Reserve a table<br>in under <em style="font-style:italic; font-family:var(--serif); color:var(--gold)">60 seconds.</em></h2>
+    <div class="rule reveal"></div>
+    <div class="wa-steps">
+      <div class="wa-step reveal">
+        <div class="step-num">01</div>
+        <div>
+          <div class="step-title">Guest starts on WhatsApp</div>
+          <div class="step-desc">No app download required. Guests simply message your restaurant's WhatsApp number — just like texting a friend.</div>
+        </div>
+      </div>
+      <div class="wa-step reveal reveal-delay-1">
+        <div class="step-num">02</div>
+        <div>
+          <div class="step-title">Smart guided conversation</div>
+          <div class="step-desc">AI-powered flow collects date, time, party size, and name in a natural back-and-forth — no forms, no dropdowns.</div>
+        </div>
+      </div>
+      <div class="wa-step reveal reveal-delay-2">
+        <div class="step-num">03</div>
+        <div>
+          <div class="step-title">Instant confirmation</div>
+          <div class="step-desc">A booking summary lands in the guest's chat. Your dashboard updates in real time. Zero manual work.</div>
+        </div>
+      </div>
+    </div>
+    <div class="wa-cta reveal reveal-delay-3">
+      <a href="/book-table" class="btn-large primary">Book a Table</a>
+      <a href="/whatsapp-order" class="btn-large outline">WhatsApp Flow</a>
+    </div>
+  </div>
+  <div class="wa-phone reveal reveal-delay-2">
+    <div class="phone-frame">
+      <div class="phone-notch"></div>
+      <div class="phone-screen">
+        <div class="wa-header">
+          <div class="wa-avatar">M</div>
+          <div class="wa-header-info">
+            <div class="wa-name">Mirch Masala</div>
+            <div class="wa-status">online</div>
+          </div>
+        </div>
+        <div class="wa-chat">
+          <div class="wa-bubble incoming">
+            Namaste! 🌶️ Welcome to Mirch Masala. Would you like to reserve a table or place an order?
+            <div class="wa-time">9:00 PM</div>
+          </div>
+          <div class="wa-bubble outgoing">
+            I'd like to book a table for 2 this Saturday evening.
+            <div class="wa-time">9:01 PM</div>
+          </div>
+          <div class="wa-bubble incoming">
+            Of course! We have slots at 7:30 PM and 9:00 PM. Which works for you?
+            <div class="wa-time">9:01 PM</div>
+          </div>
+          <div class="wa-bubble outgoing">
+            7:30 PM please!
+            <div class="wa-time">9:02 PM</div>
+          </div>
+          <div class="wa-bubble incoming">
+            ✅ Confirmed! Table for 2 on Saturday at 7:30 PM. Booking ID: #MM2847. See you then!
+            <div class="wa-time">9:02 PM</div>
+          </div>
+        </div>
+        <div class="wa-input">
+          <div class="wa-input-field">Type a message...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+  <div class="reviews-header reveal">
+    <p class="section-eyebrow">Guest Love</p>
+    <h2 class="section-title">What our guests<br>are <em style="font-style:italic; font-family:var(--serif)">saying</em></h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card reveal">
+      <div class="review-stars">
+        <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4H12L8.5 6.5l1.3 4L6 8.5l-3.8 2 1.3-4L0 4h4.5z"/></svg>
+        <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4H12L8.5 6.5l1.3 4L6 8.5l-3.8 2 1.3-4L0 4h4.5z"/></svg>
+        <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4H12L8.5 6.5l1.3 4L6 8.5l-3.8 2 1.3-4L0 4h4.5z"/></svg>
+        <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4H12L8.5 6.5l1.3 4L6 8.5l-3.8 2 1.3-4L0 4h4.5z"/></svg>
+        <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4H12L8.5 6.5l1.3 4L6 8.5l-3.8 2 1.3-4L0 4h4.5z"/></svg>
+      </div>
+      <p class="review-text">"The Saffron Murgh Dum Biryani is unlike anything else in the city — deeply aromatic and perfectly spiced. Booking via WhatsApp took less than a minute."</p>
+      <div class="review-author">
+        <div class="review-avatar">MI</div>
+        <div>
+          <div class="review-name">Meera Iyer</div>
+          <div class="review-meta">Regular guest · Indiranagar</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card reveal reveal-delay-1">
+      <div class="review-stars">
+        <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4H12L8.5 6.5l1.3 4L6 8.5l-3.8 2 1.3-4L0 4h4.5z"/></svg>
+        <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4H12L8.5 6.5l1.3 4L6 8.5l-3.8 2 1.3-4L0 4h4.5z"/></svg>
+        <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4H12L8.5 6.5l1.3 4L6 8.5l-3.8 2 1.3-4L0 4h4.5z"/></svg>
+        <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4H12L8.5 6.5l1.3 4L6 8.5l-3.8 2 1.3-4L0 4h4.5z"/></svg>
+        <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4H12L8.5 6.5l1.3 4L6 8.5l-3.8 2 1.3-4L0 4h4.5z"/></svg>
+      </div>
+      <p class="review-text">"Mirch Masala sits at the intersection of heritage and modernity. The Nalli Nihari brought back memories of old Delhi while the Truffle Kulcha has its own confident voice."</p>
+      <div class="review-author">
+        <div class="review-avatar">KM</div>
+        <div>
+          <div class="review-name">Karan Mehta</div>
+          <div class="review-meta">Food critic · Mumbai</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card reveal reveal-delay-2">
+      <div class="review-stars">
+        <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4H12L8.5 6.5l1.3 4L6 8.5l-3.8 2 1.3-4L0 4h4.5z"/></svg>
+        <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4H12L8.5 6.5l1.3 4L6 8.5l-3.8 2 1.3-4L0 4h4.5z"/></svg>
+        <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4H12L8.5 6.5l1.3 4L6 8.5l-3.8 2 1.3-4L0 4h4.5z"/></svg>
+        <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4H12L8.5 6.5l1.3 4L6 8.5l-3.8 2 1.3-4L0 4h4.5z"/></svg>
+        <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4H12L8.5 6.5l1.3 4L6 8.5l-3.8 2 1.3-4L0 4h4.5z"/></svg>
+      </div>
+      <p class="review-text">"We hosted our annual team dinner here and the private event coordination was seamless — from inquiry to execution, zero stress. The Gunpowder Prawns had everyone talking."</p>
+      <div class="review-author">
+        <div class="review-avatar">PN</div>
+        <div>
+          <div class="review-name">Priya Nair</div>
+          <div class="review-meta">Event host · Koramangala</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card reveal reveal-delay-3">
+      <div class="review-stars">
+        <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4H12L8.5 6.5l1.3 4L6 8.5l-3.8 2 1.3-4L0 4h4.5z"/></svg>
+        <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4H12L8.5 6.5l1.3 4L6 8.5l-3.8 2 1.3-4L0 4h4.5z"/></svg>
+        <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4H12L8.5 6.5l1.3 4L6 8.5l-3.8 2 1.3-4L0 4h4.5z"/></svg>
+        <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4H12L8.5 6.5l1.3 4L6 8.5l-3.8 2 1.3-4L0 4h4.5z"/></svg>
+        <svg class="star" viewBox="0 0 12 12"><path d="M6 0l1.5 4H12L8.5 6.5l1.3 4L6 8.5l-3.8 2 1.3-4L0 4h4.5z"/></svg>
+      </div>
+      <p class="review-text">"I'd heard about this place from three different people and it lived up to every expectation. The Filter Coffee Tiramisu alone was worth the visit. Already planning my return."</p>
+      <div class="review-author">
+        <div class="review-avatar">RD</div>
+        <div>
+          <div class="review-name">Rohan Desai</div>
+          <div class="review-meta">First-time visitor · Pune</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES / OPERATOR -->
+<section class="features-section">
+  <div class="features-header reveal">
+    <p class="section-eyebrow">For Restaurant Owners</p>
+    <h2 class="section-title">The platform your<br>restaurant <em style="font-style:italic; font-family:var(--serif)">deserves</em></h2>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card reveal">
+      <div class="feature-icon">📱</div>
+      <div class="feature-title">3× More Bookings</div>
+      <div class="feature-desc">WhatsApp handles the entire reservation flow — no missed calls, no manual entry. Every booking lands directly in your dashboard.</div>
+      <div class="feature-metric">3×</div>
+      <div class="feature-metric-label">Booking increase</div>
+    </div>
+    <div class="feature-card reveal reveal-delay-1">
+      <div class="feature-icon">📈</div>
+      <div class="feature-title">62% Higher Conversion</div>
+      <div class="feature-desc">A beautifully presented digital menu with food photography and premium copy turns browsers into diners before they even walk in.</div>
+      <div class="feature-metric">62%</div>
+      <div class="feature-metric-label">Higher conversion</div>
+    </div>
+    <div class="feature-card reveal reveal-delay-2">
+      <div class="feature-icon">⚡</div>
+      <div class="feature-title">5 Hours Saved Daily</div>
+      <div class="feature-desc">Kitchen display, order status, inventory alerts, and event leads — all centralised so your team focuses on hospitality, not admin.</div>
+      <div class="feature-metric">5 hrs</div>
+      <div class="feature-metric-label">Saved per day</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-bg"></div>
+  <div class="cta-overlay"></div>
+  <div class="cta-content">
+    <p class="cta-eyebrow reveal">Aaj ka Special</p>
+    <h2 class="cta-title reveal">आइए, साथ<br><em>खाना खाएं।</em></h2>
+    <p class="cta-sub reveal">Table ready in seconds — bas aap aao.</p>
+    <div class="cta-actions reveal reveal-delay-1">
+      <a href="/book-table" class="btn-large primary">Reserve a Table</a>
+      <a href="/menu" class="btn-large outline">Browse the Menu</a>
+    </div>
+    <div class="cta-info reveal reveal-delay-2">
+      <span class="cta-info-item"><span class="cta-info-dot"></span>Free Booking</span>
+      <span class="cta-info-item"><span class="cta-info-dot"></span>Instant Confirmation</span>
+      <span class="cta-info-item"><span class="cta-info-dot"></span>WhatsApp &amp; Online</span>
+      <span class="cta-info-item"><span class="cta-info-dot"></span>Open 12:00 – 22:30</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">Mirch Masala</div>
+      <div class="footer-tagline">Progressive Indian dining in Bengaluru.</div>
+      <div class="footer-address">
+        12 Residency Road, Ashok Nagar<br>
+        Bengaluru, Karnataka 560025
+      </div>
+      <div class="footer-hours">
+        Mon – Thu &nbsp; 12:00 – 22:30<br>
+        Fri &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12:00 – 23:00<br>
+        Sat – Sun &nbsp; 12:00 – 23:30
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Explore</div>
+      <ul class="footer-links">
+        <li><a href="/menu">Full Menu</a></li>
+        <li><a href="/about">Our Story</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Reserve</div>
+      <ul class="footer-links">
+        <li><a href="/book-table">Book a Table</a></li>
+        <li><a href="/whatsapp-order">WhatsApp Order</a></li>
+        <li><a href="/track-order">Track Order</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-links">
+        <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+        <li><a href="mailto:hello@mirchmasala.in">hello@mirchmasala.in</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Mirch Masala. All rights reserved.</div>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="/login">Operator Login</a>
+    </div>
+  </div>
+</footer>
+
+<!-- TWEAKS PANEL -->
+<div id="tweaks-panel">
+  <h4>Tweaks</h4>
+  <div class="tweak-row">
+    <div class="tweak-label">Accent Color</div>
+    <div class="tweak-swatches">
+      <div class="tweak-swatch active" style="background: oklch(52% 0.19 26);" data-accent="red" title="Spice Red"></div>
+      <div class="tweak-swatch" style="background: oklch(52% 0.19 200);" data-accent="teal" title="Teal"></div>
+      <div class="tweak-swatch" style="background: oklch(52% 0.19 300);" data-accent="violet" title="Violet"></div>
+      <div class="tweak-swatch" style="background: oklch(74% 0.13 82);" data-accent="gold" title="Gold Only"></div>
+    </div>
+  </div>
+  <div class="tweak-row">
+    <div class="tweak-label">Background Tone</div>
+    <div class="tweak-swatches">
+      <div class="tweak-swatch active" style="background: oklch(9% 0.015 40); border: 1px solid #333;" data-tone="warm" title="Warm Dark"></div>
+      <div class="tweak-swatch" style="background: oklch(9% 0.015 240); border: 1px solid #333;" data-tone="cool" title="Cool Dark"></div>
+      <div class="tweak-swatch" style="background: oklch(9% 0.002 0); border: 1px solid #333;" data-tone="neutral" title="Neutral"></div>
+    </div>
+  </div>
+  <div class="tweak-row">
+    <div class="tweak-label">Ticker Speed</div>
+    <input type="range" min="15" max="60" value="35" id="ticker-speed">
+  </div>
+</div>
+
+<script>
+  /* ── PAGE CURTAIN ── */
+  const curtain = document.getElementById('curtain');
+  window.addEventListener('load', () => setTimeout(() => curtain.classList.add('gone'), 400));
+
+  /* ── HERO TITLE CHAR SPLIT ── */
+  (function splitHeroTitle() {
+    const title = document.querySelector('.hero-title');
+    const html = title.innerHTML;
+    let result = '', inTag = false, delay = 0;
+    for (let i = 0; i < html.length; i++) {
+      const ch = html[i];
+      if (ch === '<') { inTag = true; result += ch; continue; }
+      if (ch === '>') { inTag = false; result += ch; continue; }
+      if (inTag) { result += ch; continue; }
+      if (ch === ' ') { result += ch; continue; }
+      delay += 0.025;
+      result += `<span class="char" style="animation-delay:${(0.5 + delay).toFixed(3)}s">${ch}</span>`;
+    }
+    title.innerHTML = result;
+  })();
+
+  /* ── SCROLL REVEAL (generic) ── */
+  const reveals = document.querySelectorAll('.reveal');
+  const revealIO = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealIO.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => revealIO.observe(r));
+
+  /* ── DISH CARDS clip-reveal ── */
+  const dishCards = document.querySelectorAll('.dish-card');
+  const dishIO = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 110);
+        dishIO.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
+  dishCards.forEach(c => dishIO.observe(c));
+
+  /* ── CRAFT IMAGES ── */
+  const craftImgs = document.querySelectorAll('.craft-img');
+  const craftIO = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); craftIO.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  craftImgs.forEach(c => craftIO.observe(c));
+
+  /* ── RULE draw-in ── */
+  const rules = document.querySelectorAll('.rule');
+  const ruleIO = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ruleIO.unobserve(e.target); } });
+  }, { threshold: 0.5 });
+  rules.forEach(r => ruleIO.observe(r));
+
+  /* ── FEATURE CARDS ── */
+  const featCards = document.querySelectorAll('.feature-card');
+  const featIO = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 130);
+        featIO.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  featCards.forEach(c => featIO.observe(c));
+
+  /* ── REVIEW CARDS ── */
+  const revCards = document.querySelectorAll('.review-card');
+  const revIO = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 100);
+        revIO.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  revCards.forEach(c => revIO.observe(c));
+
+  /* ── WA STEP slide-right ── */
+  const waSteps = document.querySelectorAll('.wa-step');
+  const waStepIO = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 150);
+        waStepIO.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  waSteps.forEach(s => waStepIO.observe(s));
+
+  /* ── PHONE FRAME + WHATSAPP BUBBLES ── */
+  const phoneFrame = document.querySelector('.phone-frame');
+  const waBubbles = document.querySelectorAll('.wa-bubble');
+  let bubblesShown = false;
+  const phoneIO = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !bubblesShown) {
+        bubblesShown = true;
+        phoneFrame.classList.add('visible');
+        waBubbles.forEach((b, i) => setTimeout(() => b.classList.add('show'), 600 + i * 480));
+        phoneIO.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  if (phoneFrame) phoneIO.observe(phoneFrame);
+
+  /* ── COUNTER ANIMATION ── */
+  function animateCount(el, from, to, duration, suffix = '') {
+    const start = performance.now();
+    el.classList.add('counting');
+    function update(now) {
+      const p = Math.min((now - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - p, 3);
+      const val = Math.round(from + (to - from) * ease);
+      el.textContent = val.toLocaleString('en-IN') + suffix;
+      if (p < 1) requestAnimationFrame(update);
+      else { el.textContent = to.toLocaleString('en-IN') + suffix; el.classList.remove('counting'); }
+    }
+    requestAnimationFrame(update);
+  }
+
+  let heroCountDone = false;
+  const heroStatsEl = document.querySelector('.hero-stats');
+  const heroIO = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !heroCountDone) {
+        heroCountDone = true;
+        setTimeout(() => {
+          const s0 = document.querySelector('.hero-stats .stat:nth-child(1) .stat-num');
+          const s1 = document.querySelector('.hero-stats .stat:nth-child(2) .stat-num');
+          const s2 = document.querySelector('.hero-stats .stat:nth-child(3) .stat-num');
+          let dur = 1800;
+          const start = performance.now();
+          function tick(now) {
+            const p = Math.min((now - start) / dur, 1);
+            const ease = 1 - Math.pow(1 - p, 3);
+            s0.textContent = (4.5 + 0.4 * ease).toFixed(1);
+            s1.textContent = Math.round(18000 * ease).toLocaleString('en-IN').replace(/,\d+$/, '') + 'k+';
+            s2.textContent = Math.round(320 * ease) + '+';
+            if (p < 1) requestAnimationFrame(tick);
+            else { s0.textContent = '4.9'; s1.textContent = '18k+'; s2.textContent = '320+'; }
+          }
+          requestAnimationFrame(tick);
+        }, 800);
+        heroIO.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  if (heroStatsEl) heroIO.observe(heroStatsEl);
+
+  let craftCountDone = false;
+  const craftNumsEl = document.querySelector('.craft-nums');
+  const craftNumIO = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !craftCountDone) {
+        craftCountDone = true;
+        const n0 = document.querySelector('.craft-nums .craft-num:nth-child(1) .craft-num-val');
+        if (n0) animateCount(n0, 0, 12, 1400, '+');
+        craftNumIO.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  if (craftNumsEl) craftNumIO.observe(craftNumsEl);
+
+  /* ── SPICE PARTICLES in CTA ── */
+  const ctaSection = document.querySelector('.cta-section');
+  if (ctaSection) {
+    const colors = ['var(--gold)', 'var(--red)', 'oklch(70% 0.1 60)', 'oklch(80% 0.08 90)'];
+    for (let i = 0; i < 22; i++) {
+      const p = document.createElement('div');
+      p.className = 'spice-particle';
+      p.style.cssText = `
+        left: ${5 + Math.random() * 90}%;
+        bottom: ${Math.random() * 30}%;
+        width: ${3 + Math.random() * 5}px;
+        height: ${3 + Math.random() * 5}px;
+        background: ${colors[Math.floor(Math.random() * colors.length)]};
+        --dur: ${3 + Math.random() * 5}s;
+        --delay: ${Math.random() * 6}s;
+        border-radius: ${Math.random() > 0.5 ? '50%' : '2px'};
+      `;
+      ctaSection.appendChild(p);
+    }
+  }
+
+  /* ── PARALLAX on hero bg ── */
+  const heroBg = document.querySelector('.hero-bg');
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (heroBg && y < window.innerHeight * 1.5) {
+      heroBg.style.transform = `scale(1.05) translateY(${y * 0.25}px)`;
+    }
+    navbar.style.background = y > 60
+      ? 'oklch(9% 0.015 40 / 0.97)'
+      : 'linear-gradient(to bottom, oklch(9% 0.015 40 / 0.95), transparent)';
+  }, { passive: true });
+
+  /* ── TWEAKS PANEL ── */
+  window.addEventListener('message', e => {
+    if (e.data?.type === '__activate_edit_mode') document.getElementById('tweaks-panel').style.display = 'block';
+    if (e.data?.type === '__deactivate_edit_mode') document.getElementById('tweaks-panel').style.display = 'none';
+  });
+  window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+
+  const accentMap = {
+    red: { '--red': 'oklch(52% 0.19 26)', '--red-bright': 'oklch(60% 0.22 28)' },
+    teal: { '--red': 'oklch(52% 0.19 200)', '--red-bright': 'oklch(60% 0.22 195)' },
+    violet: { '--red': 'oklch(52% 0.19 300)', '--red-bright': 'oklch(60% 0.22 295)' },
+    gold: { '--red': 'oklch(65% 0.15 82)', '--red-bright': 'oklch(72% 0.17 82)' },
+  };
+  document.querySelectorAll('[data-accent]').forEach(sw => {
+    sw.addEventListener('click', () => {
+      document.querySelectorAll('[data-accent]').forEach(s => s.classList.remove('active'));
+      sw.classList.add('active');
+      const c = accentMap[sw.dataset.accent];
+      Object.entries(c).forEach(([k, v]) => document.documentElement.style.setProperty(k, v));
+    });
+  });
+
+  const toneMap = {
+    warm: { '--bg': 'oklch(9% 0.015 40)', '--bg2': 'oklch(12% 0.018 38)', '--bg3': 'oklch(15% 0.022 36)' },
+    cool: { '--bg': 'oklch(9% 0.015 240)', '--bg2': 'oklch(12% 0.018 240)', '--bg3': 'oklch(15% 0.022 230)' },
+    neutral: { '--bg': 'oklch(9% 0.002 0)', '--bg2': 'oklch(12% 0.002 0)', '--bg3': 'oklch(15% 0.002 0)' },
+  };
+  document.querySelectorAll('[data-tone]').forEach(sw => {
+    sw.addEventListener('click', () => {
+      document.querySelectorAll('[data-tone]').forEach(s => s.classList.remove('active'));
+      sw.classList.add('active');
+      const c = toneMap[sw.dataset.tone];
+      Object.entries(c).forEach(([k, v]) => document.documentElement.style.setProperty(k, v));
+    });
+  });
+
+  document.getElementById('ticker-speed').addEventListener('input', function() {
+    document.querySelector('.ticker-track').style.animationDuration = this.value + 's';
+  });
+
+  /* ── HAMBURGER MENU ── */
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+</script>
+<script>
+// Check if customer is signed in via NextAuth session
+fetch('/api/auth/session').then(r=>r.json()).then(session=>{
+  if(session && session.user) {
+    const name = session.user.name ? session.user.name.split(' ')[0] : 'Account';
+    const btns = [document.getElementById('customer-signin-btn'), document.getElementById('mobile-signin-btn')];
+    btns.forEach(btn => { if(btn) { btn.textContent = name; btn.href = '/account'; } });
+  }
+}).catch(()=>{});
+</script>
+</body>
+</html>

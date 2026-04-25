@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#0e1a10"/><stop offset="100%" stop-color="#0c1a0f"/></radialGradient>
+    <radialGradient id="bowl" cx="50%" cy="35%" r="60%"><stop offset="0%" stop-color="#282018"/><stop offset="100%" stop-color="#141008"/></radialGradient>
+    <radialGradient id="raita" cx="50%" cy="30%" r="65%"><stop offset="0%" stop-color="#fffaf5"/><stop offset="60%" stop-color="#f8f0e8"/><stop offset="100%" stop-color="#ece0cc"/></radialGradient>
+    <radialGradient id="burrata" cx="40%" cy="30%" r="60%"><stop offset="0%" stop-color="#ffffff"/><stop offset="70%" stop-color="#f8f8f0"/><stop offset="100%" stop-color="#f0ece0"/></radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <!-- Bowl shadow -->
+  <ellipse cx="200" cy="195" rx="100" ry="18" fill="#010100" opacity="0.7"/>
+  <!-- Wide shallow bowl -->
+  <ellipse cx="200" cy="186" rx="102" ry="34" fill="url(#bowl)"/>
+  <ellipse cx="200" cy="182" rx="98" ry="32" fill="#1e1810"/>
+  <!-- Rim -->
+  <ellipse cx="200" cy="158" rx="98" ry="15" fill="#2a2018" stroke="#3a2e18" stroke-width="1"/>
+  <ellipse cx="200" cy="156" rx="94" ry="13" fill="#221808"/>
+  <ellipse cx="200" cy="157" rx="98" ry="15" fill="none" stroke="#8a7030" stroke-width="1" opacity="0.5"/>
+
+  <!-- Raita surface (yoghurt) -->
+  <ellipse cx="200" cy="158" rx="90" ry="13" fill="url(#raita)"/>
+  <ellipse cx="200" cy="156" rx="86" ry="11" fill="#fffaf5"/>
+
+  <!-- Burrata ball in center -->
+  <circle cx="200" cy="150" r="24" fill="#e8e0d0"/>
+  <circle cx="200" cy="149" r="22" fill="url(#burrata)"/>
+  <!-- Burrata creamy interior burst -->
+  <ellipse cx="200" cy="148" rx="12" ry="10" fill="#fffcf0" opacity="0.8"/>
+  <!-- Burrata texture lines -->
+  <path d="M185 143 Q200 138 215 143" fill="none" stroke="#e8e0c8" stroke-width="1" opacity="0.5"/>
+  <path d="M183 148 Q200 143 217 148" fill="none" stroke="#e8e0c8" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Cucumber bits in raita -->
+  <ellipse cx="155" cy="158" rx="8" ry="5" fill="#6aaa38" opacity="0.8"/>
+  <ellipse cx="155" cy="157" rx="6" ry="3.5" fill="#7abc48"/>
+  <ellipse cx="248" cy="158" rx="7" ry="4.5" fill="#6aaa38" opacity="0.75"/>
+  <ellipse cx="165" cy="163" rx="6" ry="3.5" fill="#6aaa38" opacity="0.7"/>
+  <ellipse cx="238" cy="162" rx="5" ry="3" fill="#7abc48" opacity="0.7"/>
+
+  <!-- Pomegranate seeds on raita -->
+  <circle cx="175" cy="155" r="2.5" fill="#cc1818"/>
+  <circle cx="227" cy="155" r="2.5" fill="#cc1818"/>
+  <circle cx="210" cy="162" r="2" fill="#bb1010"/>
+  <circle cx="188" cy="163" r="2" fill="#cc1818"/>
+
+  <!-- Chilli oil drizzle on burrata -->
+  <path d="M188 142 Q200 137 212 142" fill="none" stroke="#cc3010" stroke-width="1.5" opacity="0.6" stroke-linecap="round"/>
+
+  <!-- Mint leaf on burrata -->
+  <path d="M192 136 Q198 128 202 133 Q198 140 192 136Z" fill="#3a8820"/>
+  <path d="M195 128 Q201 120 205 125 Q201 132 195 128Z" fill="#4a9828"/>
+  <path d="M193 136 Q198 129 202 133" fill="none" stroke="#2a6a18" stroke-width="0.6"/>
+
+  <!-- Cumin/jeera sprinkle -->
+  <circle cx="167" cy="158" r="1.2" fill="#3a2010" opacity="0.8"/>
+  <circle cx="232" cy="157" r="1.2" fill="#3a2010" opacity="0.8"/>
+  <circle cx="182" cy="162" r="1" fill="#3a2010" opacity="0.7"/>
+
+  <!-- Label -->
+  <text x="200" y="232" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#e8a020" opacity="0.9">Burrata Raita</text>
+  <text x="200" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#c8b89a" opacity="0.6" letter-spacing="1.5">BREADS &amp; SIDES</text>
+</svg>

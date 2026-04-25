@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#1a3a1e"/>
+      <stop offset="100%" stop-color="#0c1a0f"/>
+    </radialGradient>
+    <radialGradient id="plate" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#2e2218"/>
+      <stop offset="100%" stop-color="#1a1208"/>
+    </radialGradient>
+    <radialGradient id="puri1" cx="40%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#f0d080"/>
+      <stop offset="100%" stop-color="#c8901a"/>
+    </radialGradient>
+    <radialGradient id="puri2" cx="40%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#e8c870"/>
+      <stop offset="100%" stop-color="#b87a10"/>
+    </radialGradient>
+    <radialGradient id="yoghurt" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#fffaf0"/>
+      <stop offset="100%" stop-color="#f5e8d0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="rgba(0,0,0,0.5)"/>
+    </filter>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <!-- Slate serving board -->
+  <rect x="60" y="110" width="280" height="130" rx="12" fill="#1a1a1a" opacity="0.7"/>
+  <rect x="62" y="112" width="276" height="126" rx="11" fill="none" stroke="#333" stroke-width="0.5"/>
+  <!-- Plate -->
+  <ellipse cx="200" cy="175" rx="100" ry="28" fill="#252010" opacity="0.6"/>
+  <ellipse cx="200" cy="168" rx="105" ry="30" fill="url(#plate)" filter="url(#shadow)"/>
+  <ellipse cx="200" cy="165" rx="98" ry="26" fill="none" stroke="#8a6a20" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Puri 1 (left) -->
+  <ellipse cx="148" cy="162" rx="28" ry="26" fill="url(#puri1)"/>
+  <ellipse cx="148" cy="158" rx="25" ry="22" fill="none" stroke="#c8901a" stroke-width="1.5" opacity="0.6"/>
+  <!-- Hole on top of puri -->
+  <ellipse cx="148" cy="155" rx="10" ry="9" fill="#1a0e05"/>
+  <!-- Yoghurt filling -->
+  <ellipse cx="148" cy="155" rx="8" ry="7" fill="url(#yoghurt)"/>
+  <!-- Tamarind drizzle -->
+  <path d="M143 150 Q148 147 153 150 Q150 153 148 152 Q146 153 143 150Z" fill="#4a1a05" opacity="0.8"/>
+  <!-- Pomegranate seeds -->
+  <circle cx="145" cy="153" r="1.5" fill="#cc2222"/>
+  <circle cx="150" cy="152" r="1.5" fill="#cc2222"/>
+  <circle cx="148" cy="156" r="1.2" fill="#aa1111"/>
+
+  <!-- Puri 2 (center) -->
+  <ellipse cx="200" cy="158" rx="28" ry="26" fill="url(#puri2)"/>
+  <ellipse cx="200" cy="154" rx="25" ry="22" fill="none" stroke="#b87a10" stroke-width="1.5" opacity="0.6"/>
+  <ellipse cx="200" cy="151" rx="10" ry="9" fill="#1a0e05"/>
+  <ellipse cx="200" cy="151" rx="8" ry="7" fill="url(#yoghurt)"/>
+  <path d="M195 146 Q200 143 205 146 Q202 149 200 148 Q198 149 195 146Z" fill="#4a1a05" opacity="0.8"/>
+  <circle cx="197" cy="149" r="1.5" fill="#cc2222"/>
+  <circle cx="202" cy="148" r="1.5" fill="#cc2222"/>
+  <circle cx="200" cy="152" r="1.2" fill="#dd3333"/>
+
+  <!-- Puri 3 (right) -->
+  <ellipse cx="252" cy="162" rx="28" ry="26" fill="url(#puri1)"/>
+  <ellipse cx="252" cy="158" rx="25" ry="22" fill="none" stroke="#c8901a" stroke-width="1.5" opacity="0.6"/>
+  <ellipse cx="252" cy="155" rx="10" ry="9" fill="#1a0e05"/>
+  <ellipse cx="252" cy="155" rx="8" ry="7" fill="url(#yoghurt)"/>
+  <path d="M247 150 Q252 147 257 150 Q254 153 252 152 Q250 153 247 150Z" fill="#4a1a05" opacity="0.8"/>
+  <circle cx="249" cy="153" r="1.5" fill="#cc2222"/>
+  <circle cx="254" cy="152" r="1.5" fill="#cc2222"/>
+
+  <!-- Truffle shavings -->
+  <path d="M170 140 Q175 136 180 140" fill="none" stroke="#2a1a08" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+  <path d="M220 136 Q226 132 232 136" fill="none" stroke="#2a1a08" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+
+  <!-- Microgreens garnish -->
+  <path d="M188 132 Q192 120 196 128" fill="none" stroke="#3a7a30" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M204 130 Q207 118 211 126" fill="none" stroke="#4a8a40" stroke-width="1.2" stroke-linecap="round"/>
+  <circle cx="196" cy="128" r="2" fill="#4a9a3a"/>
+  <circle cx="211" cy="126" r="2" fill="#3a8a2a"/>
+
+  <!-- Saffron drizzle lines on plate -->
+  <path d="M130 180 Q165 175 200 178 Q235 175 270 180" fill="none" stroke="#e8a020" stroke-width="0.8" opacity="0.4" stroke-dasharray="3,4"/>
+
+  <!-- Label -->
+  <text x="200" y="228" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#e8a020" opacity="0.9" letter-spacing="0.5">Truffle Dahi Puri</text>
+  <text x="200" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#c8b89a" opacity="0.6" letter-spacing="1.5">SIGNATURE STARTERS</text>
+</svg>

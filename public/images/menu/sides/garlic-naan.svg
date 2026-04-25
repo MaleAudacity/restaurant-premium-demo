@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#1a1005"/><stop offset="100%" stop-color="#0c1a0f"/></radialGradient>
+    <radialGradient id="naan" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#f8e8a8"/><stop offset="50%" stop-color="#e8c870"/><stop offset="100%" stop-color="#c09830"/></radialGradient>
+    <radialGradient id="char" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a0800" stop-opacity="0.85"/><stop offset="100%" stop-color="#1a0800" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <!-- Plate/basket -->
+  <ellipse cx="200" cy="192" rx="118" ry="22" fill="#060400" opacity="0.6"/>
+  <ellipse cx="200" cy="185" rx="120" ry="24" fill="#1a1008"/>
+  <ellipse cx="200" cy="181" rx="112" ry="20" fill="#201508"/>
+
+  <!-- Naan 1 (back, slightly angled) -->
+  <path d="M130 175 Q128 140 148 120 Q170 100 210 108 Q240 114 248 135 Q254 155 240 170 Q220 180 185 178 Q155 176 130 175Z" fill="#c09030" transform="rotate(-8 190 145)"/>
+  <path d="M132 173 Q130 140 150 122 Q172 103 210 110 Q238 116 246 136 Q252 154 238 168 Q219 178 185 176 Q156 174 132 173Z" fill="url(#naan)" transform="rotate(-8 190 145)"/>
+  <!-- Char bubbles on naan 1 -->
+  <ellipse cx="162" cy="135" rx="12" ry="8" fill="url(#char)" transform="rotate(-8 162 135)"/>
+  <ellipse cx="190" cy="122" rx="10" ry="7" fill="url(#char)" transform="rotate(-8 190 122)"/>
+  <ellipse cx="215" cy="132" rx="9" ry="6" fill="url(#char)" transform="rotate(-8 215 132)"/>
+  <!-- Garlic bits -->
+  <ellipse cx="155" cy="148" rx="5" ry="3" fill="#e8d080" transform="rotate(-8 155 148)" opacity="0.85"/>
+  <ellipse cx="175" cy="140" rx="4" ry="2.5" fill="#f0d888" transform="rotate(-8 175 140)" opacity="0.8"/>
+  <ellipse cx="200" cy="143" rx="5" ry="3" fill="#e8d080" transform="rotate(-8 200 143)" opacity="0.85"/>
+  <ellipse cx="222" cy="148" rx="4" ry="2.5" fill="#f0d888" transform="rotate(-8 222 148)" opacity="0.8"/>
+  <!-- Coriander flecks on naan 1 -->
+  <circle cx="168" cy="152" r="2" fill="#3a8820" opacity="0.8" transform="rotate(-8 168 152)"/>
+  <circle cx="195" cy="155" r="1.8" fill="#4a9828" opacity="0.7" transform="rotate(-8 195 155)"/>
+  <circle cx="210" cy="150" r="2" fill="#3a8820" opacity="0.75" transform="rotate(-8 210 150)"/>
+  <!-- Butter sheen -->
+  <path d="M148 138 Q185 128 225 135" fill="none" stroke="#f8e840" stroke-width="1.5" opacity="0.35" stroke-linecap="round" transform="rotate(-8 185 133)"/>
+
+  <!-- Naan 2 (front, overlapping) -->
+  <path d="M145 182 Q140 150 162 128 Q186 107 225 115 Q256 122 262 145 Q267 165 250 178 Q228 190 190 188 Q160 186 145 182Z" fill="#b08820" transform="rotate(5 205 155)" opacity="0.6"/>
+  <path d="M147 180 Q142 150 164 130 Q188 109 225 117 Q254 124 260 146 Q265 164 248 176 Q227 188 190 186 Q161 184 147 180Z" fill="#dab840" transform="rotate(5 205 155)" opacity="0.4"/>
+
+  <!-- Butter drizzle -->
+  <path d="M155 155 Q185 148 220 153 Q245 148 265 155" fill="none" stroke="#f8d840" stroke-width="2" opacity="0.55" stroke-linecap="round"/>
+
+  <!-- Label -->
+  <text x="200" y="232" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#e8a020" opacity="0.9">Garlic Naan</text>
+  <text x="200" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#c8b89a" opacity="0.6" letter-spacing="1.5">BREADS &amp; SIDES</text>
+</svg>

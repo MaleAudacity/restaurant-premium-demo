@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#1a1208"/><stop offset="100%" stop-color="#0c1a0f"/></radialGradient>
+    <linearGradient id="seekh1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f0dca8"/><stop offset="30%" stop-color="#e8c880"/><stop offset="70%" stop-color="#d0a850"/><stop offset="100%" stop-color="#b88030"/></linearGradient>
+    <linearGradient id="seekh2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#e8d098"/><stop offset="40%" stop-color="#dfc070"/><stop offset="100%" stop-color="#c09040"/></linearGradient>
+    <linearGradient id="skewer" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#7a6a50"/><stop offset="50%" stop-color="#a08060"/><stop offset="100%" stop-color="#7a6a50"/></linearGradient>
+    <radialGradient id="char" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a0800" stop-opacity="0.8"/><stop offset="100%" stop-color="#1a0800" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <!-- Grill/coal bed hint -->
+  <ellipse cx="200" cy="188" rx="118" ry="26" fill="#0a0800" opacity="0.7"/>
+  <ellipse cx="200" cy="182" rx="120" ry="28" fill="#141008"/>
+  <ellipse cx="200" cy="178" rx="112" ry="24" fill="#1a1208"/>
+
+  <!-- Seekh kebab 1 (back, angled) -->
+  <rect x="95" y="132" width="210" height="5" rx="2.5" fill="url(#skewer)" transform="rotate(-4 200 135)"/>
+  <rect x="118" y="119" width="80" height="24" rx="12" fill="url(#seekh1)" transform="rotate(-4 158 131)"/>
+  <!-- Ridges on seekh -->
+  <line x1="130" y1="119" x2="128" y2="143" stroke="#c09040" stroke-width="1.5" opacity="0.4" transform="rotate(-4 129 131)"/>
+  <line x1="143" y1="119" x2="141" y2="143" stroke="#c09040" stroke-width="1.5" opacity="0.4" transform="rotate(-4 142 131)"/>
+  <line x1="156" y1="119" x2="154" y2="143" stroke="#c09040" stroke-width="1.5" opacity="0.4" transform="rotate(-4 155 131)"/>
+  <line x1="169" y1="119" x2="167" y2="143" stroke="#c09040" stroke-width="1.5" opacity="0.4" transform="rotate(-4 168 131)"/>
+  <line x1="182" y1="119" x2="180" y2="143" stroke="#c09040" stroke-width="1.5" opacity="0.4" transform="rotate(-4 181 131)"/>
+  <!-- Char spots -->
+  <ellipse cx="135" cy="130" rx="6" ry="5" fill="url(#char)" transform="rotate(-4 135 130)"/>
+  <ellipse cx="160" cy="128" rx="5" ry="4" fill="url(#char)" transform="rotate(-4 160 128)"/>
+  <ellipse cx="182" cy="130" rx="5" ry="4" fill="url(#char)" transform="rotate(-4 182 130)"/>
+  <path d="M120 123 Q158 117 198 122" fill="none" stroke="#fffae0" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+
+  <!-- Seekh kebab 2 (mid) -->
+  <rect x="95" y="155" width="210" height="5" rx="2.5" fill="url(#skewer)" transform="rotate(2 200 157)"/>
+  <rect x="115" y="141" width="85" height="24" rx="12" fill="url(#seekh2)" transform="rotate(2 157 153)"/>
+  <line x1="127" y1="141" x2="129" y2="165" stroke="#b08030" stroke-width="1.5" opacity="0.4" transform="rotate(2 128 153)"/>
+  <line x1="141" y1="141" x2="143" y2="165" stroke="#b08030" stroke-width="1.5" opacity="0.4" transform="rotate(2 142 153)"/>
+  <line x1="155" y1="141" x2="157" y2="165" stroke="#b08030" stroke-width="1.5" opacity="0.4" transform="rotate(2 156 153)"/>
+  <line x1="169" y1="141" x2="171" y2="165" stroke="#b08030" stroke-width="1.5" opacity="0.4" transform="rotate(2 170 153)"/>
+  <line x1="183" y1="141" x2="185" y2="165" stroke="#b08030" stroke-width="1.5" opacity="0.4" transform="rotate(2 184 153)"/>
+  <ellipse cx="132" cy="152" rx="6" ry="4" fill="url(#char)" transform="rotate(2 132 152)"/>
+  <ellipse cx="158" cy="151" rx="5" ry="4" fill="url(#char)" transform="rotate(2 158 151)"/>
+  <path d="M117 146 Q157 140 200 145" fill="none" stroke="#fffae0" stroke-width="1" opacity="0.22" stroke-linecap="round"/>
+
+  <!-- Seekh kebab 3 (front) -->
+  <rect x="95" y="177" width="210" height="5" rx="2.5" fill="url(#skewer)" transform="rotate(-1 200 179)"/>
+  <rect x="130" y="163" width="80" height="24" rx="12" fill="url(#seekh1)" transform="rotate(-1 170 175)"/>
+  <line x1="142" y1="163" x2="141" y2="187" stroke="#c09040" stroke-width="1.5" opacity="0.35" transform="rotate(-1 141 175)"/>
+  <line x1="156" y1="163" x2="155" y2="187" stroke="#c09040" stroke-width="1.5" opacity="0.35" transform="rotate(-1 155 175)"/>
+  <line x1="170" y1="163" x2="169" y2="187" stroke="#c09040" stroke-width="1.5" opacity="0.35" transform="rotate(-1 169 175)"/>
+  <line x1="184" y1="163" x2="183" y2="187" stroke="#c09040" stroke-width="1.5" opacity="0.35" transform="rotate(-1 183 175)"/>
+  <ellipse cx="148" cy="174" rx="6" ry="4" fill="url(#char)"/>
+  <ellipse cx="172" cy="173" rx="5" ry="4" fill="url(#char)"/>
+
+  <!-- Afghani cream drizzle over kebabs -->
+  <path d="M118 130 Q158 124 198 128" fill="none" stroke="#fffaee" stroke-width="1.5" opacity="0.35" stroke-linecap="round"/>
+  <path d="M115 153 Q155 147 200 151" fill="none" stroke="#fffaee" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+
+  <!-- Mint chutney dot cluster -->
+  <circle cx="310" cy="155" r="18" fill="#1a5010" opacity="0.85"/>
+  <circle cx="310" cy="155" r="14" fill="#2a7018"/>
+  <path d="M303 153 Q308 148 314 153 Q311 158 308 157 Q305 158 303 153Z" fill="#4a9030" opacity="0.8"/>
+
+  <!-- Sliced onion rings -->
+  <ellipse cx="105" cy="165" rx="16" ry="7" fill="none" stroke="#e8c8a0" stroke-width="1.5" opacity="0.7"/>
+  <ellipse cx="105" cy="165" rx="10" ry="4" fill="none" stroke="#e8c8a0" stroke-width="1" opacity="0.4"/>
+
+  <!-- Lemon wedge -->
+  <path d="M290 130 Q305 118 315 126 Q311 140 298 142Z" fill="#d8d020" opacity="0.8"/>
+  <path d="M290 130 Q305 118 314 126" fill="none" stroke="#b8b010" stroke-width="0.8"/>
+
+  <!-- Label -->
+  <text x="200" y="228" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#e8a020" opacity="0.9" letter-spacing="0.3">Afghani Murgh Seekh</text>
+  <text x="200" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#c8b89a" opacity="0.6" letter-spacing="1.5">TANDOOR &amp; GRILL</text>
+</svg>

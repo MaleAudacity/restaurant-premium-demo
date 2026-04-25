@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#0f1a08"/><stop offset="100%" stop-color="#0c1a0f"/></radialGradient>
+    <radialGradient id="plate" cx="50%" cy="35%" r="60%"><stop offset="0%" stop-color="#2a1a08"/><stop offset="100%" stop-color="#181008"/></radialGradient>
+    <radialGradient id="floret" cx="35%" cy="25%" r="65%"><stop offset="0%" stop-color="#5aaa30"/><stop offset="50%" stop-color="#3a8818"/><stop offset="100%" stop-color="#1a5008"/></radialGradient>
+    <radialGradient id="charr" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a0800" stop-opacity="0.9"/><stop offset="100%" stop-color="#1a0800" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <!-- Plate -->
+  <ellipse cx="200" cy="188" rx="112" ry="28" fill="#100800" opacity="0.6"/>
+  <ellipse cx="200" cy="180" rx="115" ry="30" fill="url(#plate)"/>
+  <ellipse cx="200" cy="176" rx="107" ry="26" fill="#221408"/>
+  <ellipse cx="200" cy="173" rx="102" ry="22" fill="#201208"/>
+
+  <!-- Broccoli floret 1 (back left) -->
+  <ellipse cx="158" cy="162" rx="22" ry="18" fill="#2a7010"/>
+  <circle cx="148" cy="155" r="11" fill="url(#floret)"/>
+  <circle cx="160" cy="150" r="13" fill="url(#floret)"/>
+  <circle cx="170" cy="156" r="10" fill="url(#floret)"/>
+  <circle cx="154" cy="162" r="8" fill="#3a8818"/>
+  <circle cx="165" cy="160" r="7" fill="#3a8818"/>
+  <!-- Char marks on floret 1 -->
+  <circle cx="148" cy="153" r="5" fill="url(#charr)"/>
+  <circle cx="162" cy="148" r="4" fill="url(#charr)"/>
+  <!-- Stem -->
+  <rect x="155" y="165" width="7" height="14" rx="3" fill="#5a8a30"/>
+  <rect x="156" y="167" width="3" height="10" rx="1.5" fill="#6a9a38" opacity="0.5"/>
+
+  <!-- Broccoli floret 2 (center, largest) -->
+  <ellipse cx="200" cy="155" rx="26" ry="20" fill="#1e6008"/>
+  <circle cx="188" cy="147" r="13" fill="url(#floret)"/>
+  <circle cx="201" cy="142" r="15" fill="url(#floret)"/>
+  <circle cx="213" cy="148" r="12" fill="url(#floret)"/>
+  <circle cx="194" cy="156" r="9" fill="#4a9820"/>
+  <circle cx="207" cy="154" r="9" fill="#3a8818"/>
+  <!-- Char on center -->
+  <circle cx="189" cy="145" r="6" fill="url(#charr)"/>
+  <circle cx="202" cy="140" r="5" fill="url(#charr)"/>
+  <!-- Stem 2 -->
+  <rect x="197" y="160" width="7" height="16" rx="3" fill="#5a8a30"/>
+
+  <!-- Broccoli floret 3 (back right) -->
+  <ellipse cx="242" cy="162" rx="22" ry="18" fill="#2a7010"/>
+  <circle cx="232" cy="155" r="11" fill="url(#floret)"/>
+  <circle cx="244" cy="150" r="13" fill="url(#floret)"/>
+  <circle cx="254" cy="156" r="10" fill="url(#floret)"/>
+  <circle cx="238" cy="162" r="7" fill="#3a8818"/>
+  <circle cx="249" cy="160" r="7" fill="#3a8818"/>
+  <circle cx="244" cy="148" r="4" fill="url(#charr)"/>
+  <rect x="239" y="165" width="7" height="14" rx="3" fill="#5a8a30"/>
+
+  <!-- Tandoori marinade drips on florets -->
+  <path d="M145 158 Q143 163 144 167" fill="none" stroke="#cc4808" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  <path d="M198 155 Q196 161 197 166" fill="none" stroke="#dd5010" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M250 158 Q252 163 251 168" fill="none" stroke="#cc4808" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Yoghurt dipping sauce blob -->
+  <ellipse cx="115" cy="172" rx="20" ry="12" fill="#f5f0e8" opacity="0.85"/>
+  <ellipse cx="115" cy="170" rx="16" ry="9" fill="#fffaf5"/>
+  <!-- Mint swirl in yoghurt -->
+  <path d="M109 169 Q115 165 121 169" fill="none" stroke="#3a8a18" stroke-width="1.2" opacity="0.8"/>
+
+  <!-- Charred lemon half -->
+  <path d="M285 168 A16 12 0 0 1 285 146" fill="#d4c010" opacity="0.75"/>
+  <path d="M285 168 A16 12 0 0 0 285 146" fill="#e8d820" opacity="0.6"/>
+  <line x1="285" y1="146" x2="285" y2="168" stroke="#b8a808" stroke-width="0.8" opacity="0.7"/>
+  <path d="M285 157 Q291 154 295 157" fill="none" stroke="#c8b810" stroke-width="0.6" opacity="0.6"/>
+  <!-- Char on lemon -->
+  <circle cx="286" cy="152" r="4" fill="#2a1000" opacity="0.35"/>
+
+  <!-- Spice dust scatter -->
+  <circle cx="175" cy="168" r="1.5" fill="#cc5010" opacity="0.7"/>
+  <circle cx="225" cy="165" r="1.2" fill="#cc5010" opacity="0.6"/>
+  <circle cx="195" cy="178" r="1" fill="#aa3008" opacity="0.8"/>
+  <circle cx="210" cy="175" r="1.5" fill="#cc5010" opacity="0.5"/>
+
+  <!-- Label -->
+  <text x="200" y="228" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#e8a020" opacity="0.9" letter-spacing="0.3">Tandoori Broccoli Royale</text>
+  <text x="200" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#c8b89a" opacity="0.6" letter-spacing="1.5">SIGNATURE STARTERS</text>
+</svg>

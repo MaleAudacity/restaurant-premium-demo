@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#1a1005"/><stop offset="100%" stop-color="#0c1a0f"/></radialGradient>
+    <radialGradient id="handi" cx="40%" cy="30%" r="65%"><stop offset="0%" stop-color="#3a2808"/><stop offset="100%" stop-color="#1a1004"/></radialGradient>
+    <radialGradient id="rice" cx="40%" cy="25%" r="70%"><stop offset="0%" stop-color="#f8e8a0"/><stop offset="50%" stop-color="#e8c860"/><stop offset="100%" stop-color="#c09020"/></radialGradient>
+    <radialGradient id="saffron" cx="50%" cy="30%" r="60%"><stop offset="0%" stop-color="#f0a820"/><stop offset="100%" stop-color="#c07808"/></radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <!-- Handi vessel shadow -->
+  <ellipse cx="200" cy="200" rx="95" ry="18" fill="#020100" opacity="0.7"/>
+  <!-- Handi body -->
+  <path d="M115 185 Q100 155 108 125 Q116 100 200 95 Q284 100 292 125 Q300 155 285 185 Q270 200 200 202 Q130 200 115 185Z" fill="url(#handi)"/>
+  <path d="M118 183 Q104 155 112 127 Q120 103 200 98 Q280 103 288 127 Q296 155 282 183 Q268 198 200 200 Q132 198 118 183Z" fill="#221408"/>
+  <!-- Handi neck -->
+  <ellipse cx="200" cy="108" rx="85" ry="14" fill="#2a1808"/>
+  <ellipse cx="200" cy="106" rx="82" ry="12" fill="#301e0c"/>
+  <!-- Rim -->
+  <ellipse cx="200" cy="103" rx="82" ry="11" fill="#3a2410" stroke="#6a4018" stroke-width="1.5"/>
+  <ellipse cx="200" cy="101" rx="78" ry="9" fill="#2a1808"/>
+  <!-- Copper rim accent -->
+  <ellipse cx="200" cy="103" rx="82" ry="11" fill="none" stroke="#c07820" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Rice visible in handi opening -->
+  <ellipse cx="200" cy="103" rx="74" ry="9" fill="url(#rice)"/>
+  <ellipse cx="200" cy="101" rx="70" ry="7" fill="#f0d880"/>
+
+  <!-- Rice grain texture -->
+  <line x1="165" y1="99" x2="170" y2="103" stroke="#e0c060" stroke-width="1.2" opacity="0.6"/>
+  <line x1="178" y1="97" x2="183" y2="101" stroke="#e8ca60" stroke-width="1.2" opacity="0.5"/>
+  <line x1="192" y1="96" x2="197" y2="100" stroke="#e0c060" stroke-width="1.2" opacity="0.6"/>
+  <line x1="205" y1="96" x2="210" y2="100" stroke="#e8ca60" stroke-width="1.2" opacity="0.5"/>
+  <line x1="218" y1="97" x2="223" y2="101" stroke="#e0c060" stroke-width="1.2" opacity="0.6"/>
+  <line x1="231" y1="99" x2="236" y2="103" stroke="#e8ca60" stroke-width="1.2" opacity="0.5"/>
+
+  <!-- Saffron-tinted rice region -->
+  <ellipse cx="185" cy="99" rx="20" ry="5" fill="url(#saffron)" opacity="0.6"/>
+  <ellipse cx="215" cy="100" rx="15" ry="4" fill="#e89818" opacity="0.45"/>
+
+  <!-- Chicken piece visible at top -->
+  <ellipse cx="200" cy="104" rx="14" ry="8" fill="#c07030" opacity="0.8"/>
+  <ellipse cx="200" cy="103" rx="11" ry="6" fill="#d08040"/>
+
+  <!-- Fried onion on top -->
+  <path d="M175 95 Q182 90 190 94" fill="none" stroke="#c87820" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+  <path d="M210 93 Q218 88 225 92" fill="none" stroke="#b86818" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Mint leaves on rim -->
+  <path d="M152 96 Q158 88 162 93 Q158 100 152 96Z" fill="#3a8820"/>
+  <path d="M238 96 Q244 88 248 93 Q244 100 238 96Z" fill="#4a9828"/>
+
+  <!-- Saffron strands scattered -->
+  <path d="M186 91 Q190 86 194 91" fill="none" stroke="#e89020" stroke-width="1.5" stroke-linecap="round" opacity="0.9"/>
+  <path d="M206 89 Q210 84 214 89" fill="none" stroke="#e89020" stroke-width="1.5" stroke-linecap="round" opacity="0.85"/>
+
+  <!-- Handi handles -->
+  <path d="M100 135 Q88 128 88 148 Q88 162 100 158" fill="none" stroke="#5a3010" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
+  <path d="M300 135 Q312 128 312 148 Q312 162 300 158" fill="none" stroke="#5a3010" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Label -->
+  <text x="200" y="240" text-anchor="middle" font-family="Georgia, serif" font-size="12" font-weight="bold" fill="#e8a020" opacity="0.9" letter-spacing="0.3">Saffron Murgh Dum Biryani</text>
+  <text x="200" y="257" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#c8b89a" opacity="0.6" letter-spacing="1.5">BIRYANI ATELIER</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#180a04"/><stop offset="100%" stop-color="#0c1a0f"/></radialGradient>
+    <radialGradient id="gravy" cx="50%" cy="30%" r="70%"><stop offset="0%" stop-color="#6a2808"/><stop offset="50%" stop-color="#4a1804"/><stop offset="100%" stop-color="#200a02"/></radialGradient>
+    <radialGradient id="bowl" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#2a1208"/><stop offset="100%" stop-color="#100604"/></radialGradient>
+    <radialGradient id="bone" cx="30%" cy="25%" r="65%"><stop offset="0%" stop-color="#f0e8d0"/><stop offset="60%" stop-color="#d8c8a0"/><stop offset="100%" stop-color="#b0a070"/></radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <!-- Deep shadow for a heavy pot feel -->
+  <ellipse cx="200" cy="194" rx="108" ry="20" fill="#010000" opacity="0.8"/>
+  <!-- Wide shallow bowl/plate -->
+  <ellipse cx="200" cy="184" rx="118" ry="40" fill="url(#bowl)"/>
+  <ellipse cx="200" cy="180" rx="114" ry="38" fill="#1a0a06"/>
+  <!-- Rim -->
+  <ellipse cx="200" cy="150" rx="114" ry="18" fill="#281408" stroke="#3a1c08" stroke-width="1.2"/>
+  <ellipse cx="200" cy="148" rx="110" ry="16" fill="#200e04"/>
+  <!-- Silver/pewter rim accent -->
+  <ellipse cx="200" cy="150" rx="114" ry="18" fill="none" stroke="#7a6840" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Dark Nihari gravy surface -->
+  <ellipse cx="200" cy="150" rx="106" ry="15" fill="url(#gravy)"/>
+  <ellipse cx="200" cy="148" rx="102" ry="13" fill="#582008"/>
+  <!-- Oil sheen on gravy -->
+  <ellipse cx="175" cy="142" rx="20" ry="8" fill="#6a2808" opacity="0.55"/>
+  <ellipse cx="222" cy="145" rx="15" ry="6" fill="#602008" opacity="0.4"/>
+
+  <!-- Lamb bone (nalli) protruding -->
+  <rect x="178" y="118" width="12" height="40" rx="6" fill="url(#bone)"/>
+  <rect x="180" y="120" width="8" height="36" rx="4" fill="#efe0b8"/>
+  <!-- Marrow hint at bone top -->
+  <ellipse cx="184" cy="122" rx="4" ry="3" fill="#d4a860" opacity="0.8"/>
+  <!-- Bone base -->
+  <ellipse cx="184" cy="152" rx="9" ry="5" fill="#c8b888" opacity="0.7"/>
+
+  <!-- Second smaller bone hint -->
+  <rect x="210" y="130" width="9" height="28" rx="4.5" fill="#e8d8b0" opacity="0.75"/>
+  <rect x="212" y="132" width="5" height="24" rx="2.5" fill="#f0e4c0" opacity="0.7"/>
+
+  <!-- Ginger julienne garnish -->
+  <line x1="155" y1="138" x2="168" y2="130" stroke="#f0c848" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
+  <line x1="158" y1="141" x2="171" y2="133" stroke="#e8c040" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  <line x1="161" y1="144" x2="174" y2="136" stroke="#f0c848" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Coriander garnish -->
+  <path d="M228 128 Q236 118 240 124 Q236 132 228 128Z" fill="#3a8820"/>
+  <path d="M234 120 Q242 110 246 116 Q242 124 234 120Z" fill="#4a9828"/>
+  <circle cx="240" cy="116" r="2" fill="#5aaa30" opacity="0.7"/>
+
+  <!-- Fried onion shreds on top -->
+  <path d="M148 148 Q155 143 162 147" fill="none" stroke="#c88020" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M152 151 Q159 146 166 150" fill="none" stroke="#b87018" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <path d="M240 146 Q248 141 255 145" fill="none" stroke="#c88020" stroke-width="2" stroke-linecap="round" opacity="0.65"/>
+
+  <!-- Lemon wedge -->
+  <path d="M280 153 Q292 141 300 149 Q296 163 284 165Z" fill="#d8d820" opacity="0.75"/>
+  <path d="M280 153 Q292 141 299 148" fill="none" stroke="#b0b010" stroke-width="0.8"/>
+
+  <!-- Label -->
+  <text x="200" y="235" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#e8a020" opacity="0.9">Nalli Nihari</text>
+  <text x="200" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#c8b89a" opacity="0.6" letter-spacing="1.5">ROYAL CURRIES</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#0e1a10"/><stop offset="100%" stop-color="#0c1a0f"/></radialGradient>
+    <radialGradient id="plate" cx="50%" cy="35%" r="60%"><stop offset="0%" stop-color="#1e1e18"/><stop offset="100%" stop-color="#101010"/></radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <ellipse cx="200" cy="192" rx="115" ry="22" fill="#030404" opacity="0.6"/>
+  <ellipse cx="200" cy="184" rx="118" ry="26" fill="url(#plate)"/>
+  <ellipse cx="200" cy="180" rx="110" ry="22" fill="#181818"/>
+  <ellipse cx="200" cy="177" rx="105" ry="18" fill="none" stroke="#3a3a30" stroke-width="1" opacity="0.5"/>
+
+  <!-- Salad greens base -->
+  <ellipse cx="200" cy="163" rx="90" ry="22" fill="#1a4008" opacity="0.7"/>
+  <!-- Lettuce/arugula leaves -->
+  <path d="M138 165 Q148 150 158 158 Q155 168 145 168 Q138 168 138 165Z" fill="#3a8820" opacity="0.85"/>
+  <path d="M145 158 Q155 143 165 151 Q162 161 152 161 Q145 161 145 158Z" fill="#4a9828" opacity="0.8"/>
+  <path d="M162 153 Q172 138 182 146 Q179 156 169 156 Q162 156 162 153Z" fill="#3a8820" opacity="0.85"/>
+  <path d="M218 153 Q228 138 238 146 Q235 156 225 156 Q218 156 218 153Z" fill="#4a9828" opacity="0.8"/>
+  <path d="M235 158 Q245 143 255 151 Q252 161 242 161 Q235 161 235 158Z" fill="#3a8820" opacity="0.85"/>
+  <path d="M242 165 Q252 150 262 158 Q259 168 249 168 Q242 168 242 165Z" fill="#4a9828" opacity="0.8"/>
+
+  <!-- Smoked/charred mirchi (green chillies) -->
+  <path d="M168 160 Q175 148 188 152 Q196 156 188 164 Q179 168 170 164 Q165 162 168 160Z" fill="#2a6a08"/>
+  <path d="M169 159 Q176 149 187 153" fill="none" stroke="#4a8a20" stroke-width="0.8" opacity="0.6"/>
+  <!-- Char marks on chilli -->
+  <path d="M172 162 Q175 157 180 160" fill="none" stroke="#1a0800" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <!-- Chilli stem -->
+  <line x1="188" y1="152" x2="194" y2="144" stroke="#3a7010" stroke-width="1.5" stroke-linecap="round"/>
+
+  <path d="M210 157 Q218 145 230 150 Q238 154 230 162 Q221 167 212 162 Q207 160 210 157Z" fill="#1a5a08"/>
+  <path d="M212 156 Q219 146 229 150" fill="none" stroke="#3a7a18" stroke-width="0.8" opacity="0.6"/>
+  <path d="M215 159 Q219 154 224 157" fill="none" stroke="#1a0800" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <line x1="230" y1="150" x2="236" y2="142" stroke="#3a7010" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Cherry tomatoes -->
+  <circle cx="155" cy="162" r="9" fill="#cc1010"/>
+  <circle cx="155" cy="160" r="7" fill="#e01818"/>
+  <circle cx="155" cy="158" r="3" fill="#f03020" opacity="0.5"/>
+  <line x1="155" y1="153" x2="158" y2="148" stroke="#3a8010" stroke-width="1.5" stroke-linecap="round"/>
+
+  <circle cx="248" cy="161" r="8" fill="#cc1010"/>
+  <circle cx="248" cy="159" r="6" fill="#e01818"/>
+  <line x1="248" y1="153" x2="251" y2="148" stroke="#3a8010" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Onion rings in salad -->
+  <ellipse cx="197" cy="165" rx="12" ry="5" fill="none" stroke="#e8c0a0" stroke-width="1.5" opacity="0.65"/>
+  <ellipse cx="197" cy="165" rx="7" ry="3" fill="none" stroke="#d8a890" stroke-width="1" opacity="0.45"/>
+
+  <!-- Chaat masala drizzle -->
+  <path d="M148 170 Q174 165 200 168 Q226 164 252 170" fill="none" stroke="#e89020" stroke-width="1" opacity="0.5" stroke-dasharray="2,3"/>
+
+  <!-- Pomegranate seeds on salad -->
+  <circle cx="178" cy="168" r="2" fill="#cc1818" opacity="0.8"/>
+  <circle cx="222" cy="168" r="2" fill="#cc1818" opacity="0.75"/>
+
+  <!-- Smoke wisps -->
+  <path d="M185 148 Q187 140 185 133" fill="none" stroke="#9a9a88" stroke-width="0.8" opacity="0.2" stroke-linecap="round"/>
+  <path d="M228 146 Q230 138 228 131" fill="none" stroke="#9a9a88" stroke-width="0.8" opacity="0.18" stroke-linecap="round"/>
+
+  <!-- Label -->
+  <text x="200" y="232" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#e8a020" opacity="0.9" letter-spacing="0.3">Smoked Mirchi Salad</text>
+  <text x="200" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#c8b89a" opacity="0.6" letter-spacing="1.5">BREADS &amp; SIDES</text>
+</svg>

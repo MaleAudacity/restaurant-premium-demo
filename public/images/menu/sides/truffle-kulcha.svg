@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#1a1208"/><stop offset="100%" stop-color="#0c1a0f"/></radialGradient>
+    <radialGradient id="kulcha" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#f5e8a0"/><stop offset="50%" stop-color="#dfc858"/><stop offset="100%" stop-color="#a89020"/></radialGradient>
+    <radialGradient id="char" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a0a00" stop-opacity="0.8"/><stop offset="100%" stop-color="#1a0a00" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <ellipse cx="200" cy="190" rx="115" ry="22" fill="#060400" opacity="0.55"/>
+  <ellipse cx="200" cy="183" rx="118" ry="24" fill="#181008"/>
+  <ellipse cx="200" cy="179" rx="110" ry="20" fill="#1e1408"/>
+
+  <!-- Kulcha (rounder, more puffed than naan) -->
+  <ellipse cx="200" cy="152" rx="105" ry="55" fill="#a88018"/>
+  <ellipse cx="200" cy="149" rx="101" ry="52" fill="url(#kulcha)"/>
+  <ellipse cx="200" cy="147" rx="95" ry="48" fill="#f0d870"/>
+
+  <!-- Puffed bubbles from tandoor -->
+  <ellipse cx="168" cy="138" rx="18" ry="14" fill="url(#char)"/>
+  <ellipse cx="210" cy="130" rx="16" ry="12" fill="url(#char)"/>
+  <ellipse cx="238" cy="142" rx="14" ry="10" fill="url(#char)"/>
+  <ellipse cx="188" cy="153" rx="12" ry="9" fill="url(#char)" opacity="0.5"/>
+
+  <!-- Paneer stuffing hint (visible from sides) -->
+  <path d="M140 165 Q200 160 260 165" fill="none" stroke="#fffae0" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+
+  <!-- Truffle shavings (dark curls) -->
+  <path d="M175 138 Q182 132 188 138" fill="none" stroke="#1a0e04" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+  <path d="M195 132 Q202 126 208 132" fill="none" stroke="#1a0e04" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+  <path d="M215 138 Q222 132 228 138" fill="none" stroke="#1a0e04" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+  <path d="M185 148 Q191 142 197 148" fill="none" stroke="#2a1408" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+  <path d="M205 145 Q212 139 218 145" fill="none" stroke="#1a0e04" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+
+  <!-- Butter glaze on top -->
+  <ellipse cx="190" cy="138" rx="22" ry="12" fill="#f8e840" opacity="0.3"/>
+  <ellipse cx="215" cy="145" rx="18" ry="9" fill="#f8e840" opacity="0.2"/>
+
+  <!-- Nigella seeds scattered -->
+  <circle cx="158" cy="150" r="1.5" fill="#1a1018" opacity="0.9"/>
+  <circle cx="165" cy="145" r="1.2" fill="#1a1018" opacity="0.8"/>
+  <circle cx="172" cy="155" r="1.5" fill="#1a1018" opacity="0.9"/>
+  <circle cx="230" cy="148" r="1.5" fill="#1a1018" opacity="0.9"/>
+  <circle cx="238" cy="155" r="1.2" fill="#1a1018" opacity="0.8"/>
+  <circle cx="245" cy="150" r="1.5" fill="#1a1018" opacity="0.85"/>
+
+  <!-- Chive/herb strands -->
+  <line x1="188" y1="158" x2="192" y2="148" stroke="#4a8820" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+  <line x1="200" y1="160" x2="204" y2="150" stroke="#3a7818" stroke-width="1" stroke-linecap="round" opacity="0.65"/>
+  <line x1="213" y1="157" x2="216" y2="148" stroke="#4a8820" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Label -->
+  <text x="200" y="232" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#e8a020" opacity="0.9">Truffle Kulcha</text>
+  <text x="200" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#c8b89a" opacity="0.6" letter-spacing="1.5">BREADS &amp; SIDES</text>
+</svg>

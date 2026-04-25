@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#0e1a0a"/><stop offset="100%" stop-color="#0c1a0f"/></radialGradient>
+    <radialGradient id="plate" cx="50%" cy="35%" r="60%"><stop offset="0%" stop-color="#252018"/><stop offset="100%" stop-color="#141008"/></radialGradient>
+    <radialGradient id="rice" cx="40%" cy="25%" r="70%"><stop offset="0%" stop-color="#f0e490"/><stop offset="50%" stop-color="#d8c858"/><stop offset="100%" stop-color="#a89818"/></radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <!-- Plate -->
+  <ellipse cx="200" cy="192" rx="118" ry="26" fill="#040300" opacity="0.6"/>
+  <ellipse cx="200" cy="184" rx="120" ry="30" fill="url(#plate)"/>
+  <ellipse cx="200" cy="180" rx="112" ry="27" fill="#1c1810"/>
+  <ellipse cx="200" cy="175" rx="106" ry="23" fill="none" stroke="#6a5820" stroke-width="1" opacity="0.35"/>
+
+  <!-- Rice mound -->
+  <ellipse cx="200" cy="168" rx="94" ry="29" fill="#b09008"/>
+  <ellipse cx="200" cy="160" rx="86" ry="27" fill="url(#rice)"/>
+  <ellipse cx="200" cy="152" rx="70" ry="21" fill="#eed870"/>
+  <ellipse cx="200" cy="146" rx="50" ry="15" fill="#f4e080"/>
+  <ellipse cx="200" cy="142" rx="32" ry="10" fill="#f8e888"/>
+
+  <!-- Saffron/turmeric streaks on rice -->
+  <path d="M158 158 Q184 151 212 155" fill="none" stroke="#e89018" stroke-width="2" opacity="0.55" stroke-linecap="round"/>
+
+  <!-- Vegetables mixed in rice -->
+  <!-- Peas -->
+  <circle cx="172" cy="154" r="4.5" fill="#3a9820"/>
+  <circle cx="172" cy="153" r="3.5" fill="#4aaa28"/>
+  <circle cx="180" cy="150" r="4" fill="#3a9820"/>
+  <circle cx="180" cy="149" r="3" fill="#4aaa28"/>
+  <circle cx="222" cy="152" r="4.5" fill="#3a9820"/>
+  <circle cx="222" cy="151" r="3.5" fill="#4aaa28"/>
+  <!-- Carrot -->
+  <ellipse cx="195" cy="148" rx="7" ry="4" fill="#e86020"/>
+  <ellipse cx="195" cy="147" rx="5.5" ry="3" fill="#f07030"/>
+  <!-- Cauliflower -->
+  <circle cx="213" cy="144" r="7" fill="#f0e8c0"/>
+  <circle cx="209" cy="142" r="4" fill="#ede0b0"/>
+  <circle cx="217" cy="143" r="5" fill="#f0e8c0"/>
+  <!-- Beans -->
+  <rect x="228" y="150" width="14" height="4" rx="2" fill="#3a8010" opacity="0.85"/>
+  <!-- Bell pepper -->
+  <ellipse cx="183" cy="158" rx="8" ry="5" fill="#cc3010" opacity="0.8"/>
+  <ellipse cx="183" cy="157" rx="6" ry="3.5" fill="#e03818"/>
+  <!-- Green pep -->
+  <ellipse cx="165" cy="160" rx="7" ry="4" fill="#2a8810" opacity="0.85"/>
+
+  <!-- Fried onion -->
+  <path d="M152" y1="163" Q160 158 168 162" fill="none" stroke="#c07818" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
+  <path d="M233 161 Q241 156 248 160" fill="none" stroke="#b06810" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Mint leaves -->
+  <path d="M142 156 Q148 148 152 153 Q148 160 142 156Z" fill="#3a8820"/>
+  <path d="M148 149 Q154 141 158 146 Q154 153 148 149Z" fill="#4a9828"/>
+
+  <!-- Cashews in rice -->
+  <path d="M196 155 Q202 149 208 153" fill="none" stroke="#d4b060" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+  <path d="M216" y1="157" Q222 151 228 155" fill="none" stroke="#d4b060" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Raisins -->
+  <ellipse cx="162" cy="148" rx="4" ry="3" fill="#6a1a30" opacity="0.8"/>
+  <ellipse cx="234" cy="147" rx="3.5" ry="2.5" fill="#6a1a30" opacity="0.75"/>
+
+  <!-- Label -->
+  <text x="200" y="235" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#e8a020" opacity="0.9" letter-spacing="0.3">Noorani Subz Biryani</text>
+  <text x="200" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#c8b89a" opacity="0.6" letter-spacing="1.5">BIRYANI ATELIER</text>
+</svg>

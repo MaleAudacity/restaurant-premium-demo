@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#180e04"/><stop offset="100%" stop-color="#0c1a0f"/></radialGradient>
+    <radialGradient id="jar" cx="45%" cy="30%" r="65%"><stop offset="0%" stop-color="#2a2010"/><stop offset="100%" stop-color="#14100a"/></radialGradient>
+    <radialGradient id="cream" cx="40%" cy="25%" r="60%"><stop offset="0%" stop-color="#fffaf0"/><stop offset="70%" stop-color="#f8f0e0"/><stop offset="100%" stop-color="#f0e4c8"/></radialGradient>
+    <radialGradient id="coffee" cx="50%" cy="30%" r="60%"><stop offset="0%" stop-color="#4a2808"/><stop offset="100%" stop-color="#180c04"/></radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <!-- Glass jar shadow -->
+  <ellipse cx="200" cy="200" rx="60" ry="12" fill="#020100" opacity="0.7"/>
+  <!-- Glass jar body -->
+  <path d="M152 192 Q148 150 152 118 Q155 100 200 98 Q245 100 248 118 Q252 150 248 192 Z" fill="url(#jar)" opacity="0.8"/>
+  <path d="M154 190 Q150 150 154 120 Q157 103 200 101 Q243 103 246 120 Q250 150 246 190 Z" fill="#1a1408"/>
+  <!-- Jar rim/lid ring -->
+  <rect x="150" y="95" width="100" height="12" rx="4" fill="#2a1e0c"/>
+  <rect x="152" y="97" width="96" height="8" rx="3" fill="#3a2a14"/>
+  <rect x="150" y="95" width="100" height="2" rx="1" fill="#6a4a20" opacity="0.6"/>
+  <!-- Glass shine lines -->
+  <path d="M154 125 Q152 155 154 185" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.06" stroke-linecap="round"/>
+
+  <!-- Coffee sponge layer (bottom) -->
+  <rect x="156" y="165" width="88" height="28" rx="2" fill="url(#coffee)" opacity="0.85"/>
+  <rect x="158" y="167" width="84" height="24" rx="2" fill="#3a2008"/>
+  <!-- Finger biscuit texture -->
+  <line x1="168" y1="167" x2="168" y2="191" stroke="#2a1408" stroke-width="1" opacity="0.5"/>
+  <line x1="182" y1="167" x2="182" y2="191" stroke="#2a1408" stroke-width="1" opacity="0.5"/>
+  <line x1="196" y1="167" x2="196" y2="191" stroke="#2a1408" stroke-width="1" opacity="0.5"/>
+  <line x1="210" y1="167" x2="210" y2="191" stroke="#2a1408" stroke-width="1" opacity="0.5"/>
+  <line x1="224" y1="167" x2="224" y2="191" stroke="#2a1408" stroke-width="1" opacity="0.5"/>
+  <!-- Coffee soak drips -->
+  <path d="M162 165 Q165 160 168 165" fill="none" stroke="#1a0a04" stroke-width="1" opacity="0.7"/>
+  <path d="M196 163 Q200 158 204 163" fill="none" stroke="#1a0a04" stroke-width="1" opacity="0.65"/>
+
+  <!-- Mascarpone cream layer -->
+  <rect x="156" y="138" width="88" height="30" rx="1" fill="url(#cream)"/>
+  <rect x="158" y="140" width="84" height="26" rx="1" fill="#fff8f0"/>
+  <!-- Cream swirl texture -->
+  <path d="M162 148 Q180 142 200 148 Q220 142 238 148" fill="none" stroke="#f0e8d8" stroke-width="1" opacity="0.5"/>
+  <path d="M162 153 Q180 148 200 153 Q220 148 238 153" fill="none" stroke="#f0e8d8" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Coffee sponge layer (top) -->
+  <rect x="156" y="110" width="88" height="30" rx="2" fill="#3a2010"/>
+  <rect x="158" y="112" width="84" height="26" rx="2" fill="#2a1808"/>
+  <line x1="168" y1="112" x2="168" y2="136" stroke="#201008" stroke-width="1" opacity="0.5"/>
+  <line x1="184" y1="112" x2="184" y2="136" stroke="#201008" stroke-width="1" opacity="0.5"/>
+  <line x1="200" y1="112" x2="200" y2="136" stroke="#201008" stroke-width="1" opacity="0.5"/>
+  <line x1="216" y1="112" x2="216" y2="136" stroke="#201008" stroke-width="1" opacity="0.5"/>
+  <line x1="232" y1="112" x2="232" y2="136" stroke="#201008" stroke-width="1" opacity="0.5"/>
+
+  <!-- Cocoa powder dusting on top -->
+  <ellipse cx="200" cy="110" rx="42" ry="6" fill="#3a1a08" opacity="0.7"/>
+  <ellipse cx="200" cy="109" rx="38" ry="4.5" fill="#4a2010" opacity="0.6"/>
+  <!-- Cocoa dust dots -->
+  <circle cx="175" cy="108" r="1.5" fill="#2a0e04" opacity="0.8"/>
+  <circle cx="190" cy="107" r="1.2" fill="#2a0e04" opacity="0.7"/>
+  <circle cx="205" cy="107" r="1.5" fill="#2a0e04" opacity="0.8"/>
+  <circle cx="220" cy="108" r="1.2" fill="#2a0e04" opacity="0.75"/>
+
+  <!-- Coffee drizzle on top -->
+  <path d="M185 104 Q200 98 215 104" fill="none" stroke="#2a1008" stroke-width="2" opacity="0.7" stroke-linecap="round"/>
+
+  <!-- Star anise garnish -->
+  <path d="M168 100 L170 94 L172 100 L178 98 L173 103 L175 110 L170 106 L165 110 L167 103 L162 98 Z" fill="#3a1808" opacity="0.8" transform="scale(0.6) translate(112 70)"/>
+
+  <!-- Label -->
+  <text x="200" y="235" text-anchor="middle" font-family="Georgia, serif" font-size="12" font-weight="bold" fill="#e8a020" opacity="0.9" letter-spacing="0.3">Filter Coffee Tiramisu</text>
+  <text x="200" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#c8b89a" opacity="0.6" letter-spacing="1.5">DESSERTS &amp; POUR</text>
+</svg>

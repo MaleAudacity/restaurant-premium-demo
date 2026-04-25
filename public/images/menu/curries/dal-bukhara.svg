@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#1a0e06"/><stop offset="100%" stop-color="#0c1a0f"/></radialGradient>
+    <radialGradient id="dal" cx="50%" cy="30%" r="70%"><stop offset="0%" stop-color="#7a3810"/><stop offset="50%" stop-color="#5a2008"/><stop offset="100%" stop-color="#2a0c04"/></radialGradient>
+    <radialGradient id="bowl" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#2e1a0c"/><stop offset="100%" stop-color="#150a04"/></radialGradient>
+    <radialGradient id="cream" cx="40%" cy="30%" r="60%"><stop offset="0%" stop-color="#fff8f0"/><stop offset="100%" stop-color="#f0e0c8"/></radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <!-- Shadow -->
+  <ellipse cx="200" cy="195" rx="108" ry="20" fill="#020100" opacity="0.7"/>
+  <!-- Copper/brass handi bowl -->
+  <ellipse cx="200" cy="185" rx="110" ry="38" fill="#4a2808" opacity="0.4"/>
+  <ellipse cx="200" cy="182" rx="112" ry="40" fill="url(#bowl)"/>
+  <ellipse cx="200" cy="178" rx="108" ry="37" fill="#1a0c06"/>
+  <!-- Copper rim -->
+  <ellipse cx="200" cy="152" rx="108" ry="17" fill="#5a3010" stroke="#7a4818" stroke-width="1.5"/>
+  <ellipse cx="200" cy="150" rx="104" ry="15" fill="#3a1a08"/>
+  <!-- Brass accent -->
+  <ellipse cx="200" cy="151" rx="108" ry="17" fill="none" stroke="#c88020" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Dal surface (deep dark red-brown) -->
+  <ellipse cx="200" cy="152" rx="100" ry="14" fill="url(#dal)"/>
+  <ellipse cx="200" cy="150" rx="96" ry="12" fill="#602810"/>
+  <!-- Slow-cooked texture -->
+  <ellipse cx="178" cy="146" rx="15" ry="7" fill="#7a3010" opacity="0.6"/>
+  <ellipse cx="220" cy="148" rx="12" ry="6" fill="#6a2808" opacity="0.5"/>
+
+  <!-- Cream swirl (signature for Dal Bukhara) -->
+  <path d="M175 140 Q200 130 225 140 Q215 148 200 146 Q185 148 175 140Z" fill="url(#cream)" opacity="0.85"/>
+  <path d="M180 137 Q200 128 220 137" fill="none" stroke="#fff0e0" stroke-width="1.5" opacity="0.6" stroke-linecap="round"/>
+
+  <!-- Butter pat -->
+  <ellipse cx="185" cy="140" rx="9" ry="4" fill="#f8d840" opacity="0.8"/>
+  <ellipse cx="185" cy="139" rx="7" ry="3" fill="#ffe860" opacity="0.7"/>
+
+  <!-- Tomato tarka drizzle -->
+  <path d="M162 148 Q180 143 200 146 Q220 143 238 148" fill="none" stroke="#e03010" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
+
+  <!-- Ginger julienne -->
+  <line x1="208" y1="133" x2="218" y2="128" stroke="#e8c070" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+  <line x1="212" y1="135" x2="222" y2="130" stroke="#e8c070" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Coriander garnish -->
+  <path d="M218" y1="134" Q226 124 230 130 Q226 138 218 134Z" fill="#3a8820"/>
+  <circle cx="230" cy="130" r="2" fill="#4a9828" opacity="0.8"/>
+  <circle cx="222" cy="126" r="1.5" fill="#3a8820" opacity="0.7"/>
+
+  <!-- Kasuri methi flecks -->
+  <circle cx="190" cy="136" r="1.2" fill="#3a5010" opacity="0.8"/>
+  <circle cx="200" cy="133" r="1" fill="#3a5010" opacity="0.7"/>
+  <circle cx="210" cy="136" r="1.2" fill="#3a5010" opacity="0.8"/>
+
+  <!-- Handi handle hint -->
+  <path d="M308 155 Q320 145 320 160 Q320 170 308 168" fill="none" stroke="#8a5020" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Label -->
+  <text x="200" y="235" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#e8a020" opacity="0.9">Dal Bukhara</text>
+  <text x="200" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#c8b89a" opacity="0.6" letter-spacing="1.5">ROYAL CURRIES</text>
+</svg>

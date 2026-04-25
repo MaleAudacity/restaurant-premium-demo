@@ -1,0 +1,29 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: restaurant-premium-demo-db
+    environment:
+      POSTGRES_DB: restaurant_demo
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - restaurant-premium-demo-postgres:/var/lib/postgresql/data
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: restaurant-premium-demo-app
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgresql://postgres:password@postgres:5432/restaurant_demo
+      NEXT_PUBLIC_APP_URL: http://localhost:3000
+      DEMO_RESTAURANT_SLUG: mirch-masala
+    ports:
+      - "3000:3000"
+
+volumes:
+  restaurant-premium-demo-postgres:
