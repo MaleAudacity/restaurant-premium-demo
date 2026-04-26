@@ -5,6 +5,28 @@ export async function expectPageReady(page: Page) {
   await expect(page.locator('body')).not.toContainText(/application error|internal server error|Unhandled Runtime Error/i);
 }
 
+export async function waitForNewChatMessage(
+  page: Page,
+  previousCount: number,
+  timeoutMs = 5000,
+) {
+  await expect(async () => {
+    const count = await page.locator('[data-testid="chat-message"]').count();
+    expect(count).toBeGreaterThan(previousCount);
+  }).toPass({ timeout: timeoutMs });
+}
+
+export async function waitForChatMessageCount(
+  page: Page,
+  predicate: (count: number) => boolean,
+  timeoutMs = 5000,
+) {
+  await expect(async () => {
+    const count = await page.locator('[data-testid="chat-message"]').count();
+    expect(predicate(count)).toBe(true);
+  }).toPass({ timeout: timeoutMs });
+}
+
 export async function loginAs(context: BrowserContext, role: 'OWNER' | 'MANAGER' | 'KITCHEN' | 'DELIVERY' = 'OWNER') {
   const port = process.env.PORT ?? '3000';
   const domain = '127.0.0.1';

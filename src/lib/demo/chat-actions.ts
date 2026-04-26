@@ -23,6 +23,7 @@ import {
   startFreshDemoChatConversation,
   updateConversationState,
 } from "@/lib/demo/chat-state";
+import { emitConversationMessageAppended } from "@/lib/realtime/conversation-events";
 import {
   type ChatDraftMessage,
   type ChatEffectResult,
@@ -544,7 +545,8 @@ export async function progressDemoChat(input: {
     return;
   }
 
-  await prisma.$transaction(async (tx) => {
+  // last-write-wins on simultaneous tabs; demo scope.
+  const { conversationId } = await prisma.$transaction(async (tx) => {
     const runtime = await getDemoChatRuntime(tx);
     const primaryConversation = await ensureDemoChatConversation(tx);
     const conversationId = input.conversationId ?? primaryConversation.id;
@@ -623,27 +625,38 @@ export async function progressDemoChat(input: {
       summary: transition.summary,
       state: nextState,
     });
+
+    return { conversationId: conversation.id };
   });
+
+  emitConversationMessageAppended(conversationId);
 }
 
 export async function resetPrimaryDemoChat(conversationId?: string) {
-  await prisma.$transaction(async (tx) => {
+  const { conversationId: resolvedId } = await prisma.$transaction(async (tx) => {
     const primaryConversation = await ensureDemoChatConversation(tx);
-    await resetDemoChatConversation(tx, conversationId ?? primaryConversation.id);
+    const targetId = conversationId ?? primaryConversation.id;
+    await resetDemoChatConversation(tx, targetId);
+    return { conversationId: targetId };
   });
+
+  emitConversationMessageAppended(resolvedId);
 }
 
 export async function startNewPrimaryDemoChat() {
-  await prisma.$transaction(async (tx) => {
-    await startFreshDemoChatConversation(tx);
+  const { conversationId } = await prisma.$transaction(async (tx) => {
+    const conversation = await startFreshDemoChatConversation(tx);
+    return { conversationId: conversation.id };
   });
+
+  emitConversationMessageAppended(conversationId);
 }
 
 export async function simulatePaymentSuccess(orderId?: string) {
-  await prisma.$transaction(async (tx) => {
+  const result = await prisma.$transaction(async (tx) => {
     const order = await getTargetOrder(tx, orderId);
     if (!order) {
-      return;
+      return null;
     }
 
     await tx.order.update({
@@ -684,14 +697,18 @@ export async function simulatePaymentSuccess(orderId?: string) {
         }),
       ],
     });
+
+    return { conversationId: conversation.id };
   });
+
+  if (result) emitConversationMessageAppended(result.conversationId);
 }
 
 export async function simulatePaymentFailure(orderId?: string) {
-  await prisma.$transaction(async (tx) => {
+  const result = await prisma.$transaction(async (tx) => {
     const order = await getTargetOrder(tx, orderId);
     if (!order) {
-      return;
+      return null;
     }
 
     await tx.order.update({
@@ -733,7 +750,11 @@ export async function simulatePaymentFailure(orderId?: string) {
         }),
       ],
     });
+
+    return { conversationId: conversation.id };
   });
+
+  if (result) emitConversationMessageAppended(result.conversationId);
 }
 
 async function updateOrderStatus(
@@ -749,7 +770,7 @@ async function updateOrderStatus(
 ) {
   const order = await getTargetOrder(db, args.orderId);
   if (!order) {
-    return;
+    return null;
   }
 
   await db.order.update({
@@ -787,62 +808,72 @@ async function updateOrderStatus(
       }),
     ],
   });
+
+  return { conversationId: conversation.id };
 }
 
 export async function markOrderApproved(orderId?: string) {
-  await prisma.$transaction(async (tx) => {
-    await updateOrderStatus(tx, {
+  const result = await prisma.$transaction((tx) =>
+    updateOrderStatus(tx, {
       orderId,
       nextStatus: OrderStatus.CONFIRMED,
       systemText: "Order approved",
       badge: "Confirmed",
       footnote: "The kitchen can now begin preparation.",
       summary: "Order approved",
-    });
-  });
+    }),
+  );
+
+  if (result) emitConversationMessageAppended(result.conversationId);
 }
 
 export async function markOrderPreparing(orderId?: string) {
-  await prisma.$transaction(async (tx) => {
-    await updateOrderStatus(tx, {
+  const result = await prisma.$transaction((tx) =>
+    updateOrderStatus(tx, {
       orderId,
       nextStatus: OrderStatus.PREPARING,
       systemText: "Order moved to preparing",
       badge: "Preparing",
       footnote: "The kitchen is now actively preparing the order.",
       summary: "Order preparing",
-    });
-  });
+    }),
+  );
+
+  if (result) emitConversationMessageAppended(result.conversationId);
 }
 
 export async function markOrderReady(orderId?: string) {
-  await prisma.$transaction(async (tx) => {
-    await updateOrderStatus(tx, {
+  const result = await prisma.$transaction((tx) =>
+    updateOrderStatus(tx, {
       orderId,
       nextStatus: OrderStatus.READY,
       systemText: "Order is ready",
       badge: "Ready",
       footnote: "The order is ready for pickup, handoff, or delivery dispatch.",
       summary: "Order ready",
-    });
-  });
+    }),
+  );
+
+  if (result) emitConversationMessageAppended(result.conversationId);
 }
 
 export async function markOrderDelivered(orderId?: string) {
-  await prisma.$transaction(async (tx) => {
-    await updateOrderStatus(tx, {
+  const result = await prisma.$transaction((tx) =>
+    updateOrderStatus(tx, {
       orderId,
       nextStatus: OrderStatus.COMPLETED,
       systemText: "Order delivered",
       badge: "Delivered",
       footnote: "The order lifecycle is complete in the simulator.",
       summary: "Order delivered",
-    });
-  });
+    }),
+  );
+
+  if (result) emitConversationMessageAppended(result.conversationId);
 }
 
 export async function createSampleBookingRequest() {
-  await prisma.$transaction(async (tx) => {
+  const { conversationId } = await prisma.$transaction(async (tx) => {
     const runtime = await getDemoChatRuntime(tx);
     if (!runtime.customer.id) {
       throw new Error("Demo customer not found.");
@@ -896,7 +927,11 @@ export async function createSampleBookingRequest() {
         }),
       ],
     });
+
+    return { conversationId: conversation.id };
   });
+
+  emitConversationMessageAppended(conversationId);
 }
 
 async function updateBookingStatus(
@@ -911,7 +946,7 @@ async function updateBookingStatus(
 ) {
   const booking = await getTargetBooking(db, args.bookingId);
   if (!booking) {
-    return;
+    return null;
   }
 
   await db.tableBooking.update({
@@ -947,34 +982,40 @@ async function updateBookingStatus(
       }),
     ],
   });
+
+  return { conversationId: conversation.id };
 }
 
 export async function confirmBooking(bookingId?: string) {
-  await prisma.$transaction(async (tx) => {
-    await updateBookingStatus(tx, {
+  const result = await prisma.$transaction((tx) =>
+    updateBookingStatus(tx, {
       bookingId,
       nextStatus: BookingStatus.CONFIRMED,
       systemText: "Booking confirmed",
       badge: "Confirmed",
       summary: "Booking confirmed",
-    });
-  });
+    }),
+  );
+
+  if (result) emitConversationMessageAppended(result.conversationId);
 }
 
 export async function completeBooking(bookingId?: string) {
-  await prisma.$transaction(async (tx) => {
-    await updateBookingStatus(tx, {
+  const result = await prisma.$transaction((tx) =>
+    updateBookingStatus(tx, {
       bookingId,
       nextStatus: BookingStatus.COMPLETED,
       systemText: "Booking completed",
       badge: "Completed",
       summary: "Booking completed",
-    });
-  });
+    }),
+  );
+
+  if (result) emitConversationMessageAppended(result.conversationId);
 }
 
 export async function createSampleEventInquiry() {
-  await prisma.$transaction(async (tx) => {
+  const { conversationId } = await prisma.$transaction(async (tx) => {
     const runtime = await getDemoChatRuntime(tx);
     if (!runtime.customer.id) {
       throw new Error("Demo customer not found.");
@@ -1028,7 +1069,11 @@ export async function createSampleEventInquiry() {
         }),
       ],
     });
+
+    return { conversationId: conversation.id };
   });
+
+  emitConversationMessageAppended(conversationId);
 }
 
 async function updateEventStatus(
@@ -1043,7 +1088,7 @@ async function updateEventStatus(
 ) {
   const event = await getTargetEvent(db, args.inquiryId);
   if (!event) {
-    return;
+    return null;
   }
 
   await db.eventInquiry.update({
@@ -1087,40 +1132,48 @@ async function updateEventStatus(
       }),
     ],
   });
+
+  return { conversationId: conversation.id };
 }
 
 export async function markEventContacted(inquiryId?: string) {
-  await prisma.$transaction(async (tx) => {
-    await updateEventStatus(tx, {
+  const result = await prisma.$transaction((tx) =>
+    updateEventStatus(tx, {
       inquiryId,
       nextStatus: EventInquiryStatus.CONTACTED,
       systemText: "Event inquiry contacted",
       badge: "Contacted",
       summary: "Event inquiry contacted",
-    });
-  });
+    }),
+  );
+
+  if (result) emitConversationMessageAppended(result.conversationId);
 }
 
 export async function markEventQuoted(inquiryId?: string) {
-  await prisma.$transaction(async (tx) => {
-    await updateEventStatus(tx, {
+  const result = await prisma.$transaction((tx) =>
+    updateEventStatus(tx, {
       inquiryId,
       nextStatus: EventInquiryStatus.PROPOSAL_SENT,
       systemText: "Quote shared with guest",
       badge: "Quoted",
       summary: "Event inquiry quoted",
-    });
-  });
+    }),
+  );
+
+  if (result) emitConversationMessageAppended(result.conversationId);
 }
 
 export async function markEventConfirmed(inquiryId?: string) {
-  await prisma.$transaction(async (tx) => {
-    await updateEventStatus(tx, {
+  const result = await prisma.$transaction((tx) =>
+    updateEventStatus(tx, {
       inquiryId,
       nextStatus: EventInquiryStatus.CONFIRMED,
       systemText: "Event confirmed",
       badge: "Confirmed",
       summary: "Event inquiry confirmed",
-    });
-  });
+    }),
+  );
+
+  if (result) emitConversationMessageAppended(result.conversationId);
 }

@@ -14,7 +14,11 @@ export function DemoChatMessageBubble({ message }: { message: DemoChatMessage })
 
   if (message.direction === "SYSTEM") {
     return (
-      <div className="mx-auto max-w-[80%] rounded-full border border-white/10 bg-white/7 px-4 py-2 text-center text-[11px] uppercase tracking-[0.22em] text-stone-300/86">
+      <div
+        data-testid="chat-message"
+        data-message-direction="SYSTEM"
+        className="mx-auto max-w-[80%] rounded-full border border-white/10 bg-white/7 px-4 py-2 text-center text-[11px] uppercase tracking-[0.22em] text-stone-300/86"
+      >
         {message.content}
       </div>
     );
@@ -24,7 +28,11 @@ export function DemoChatMessageBubble({ message }: { message: DemoChatMessage })
   const hasCard = Boolean(message.metadata?.card);
 
   return (
-    <div className={cn("flex w-full", isInbound ? "justify-end" : "justify-start")}>
+    <div
+      data-testid="chat-message"
+      data-message-direction={message.direction}
+      className={cn("flex w-full", isInbound ? "justify-end" : "justify-start")}
+    >
       <div className={cn("max-w-[86%] space-y-1", isInbound ? "items-end" : "items-start")}>
         {hasCard ? (
           <DemoChatSummaryCard card={message.metadata!.card!} />

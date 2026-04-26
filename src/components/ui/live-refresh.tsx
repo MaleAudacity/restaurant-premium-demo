@@ -8,7 +8,13 @@ export function LiveRefresh() {
 
   useEffect(() => {
     const source = new EventSource("/api/events");
-    source.onmessage = () => {
+    source.onmessage = (event) => {
+      try {
+        const data = JSON.parse(event.data);
+        if (data?.type === "connected") return;
+      } catch {
+        // ignore parse errors and refresh anyway
+      }
       startTransition(() => {
         router.refresh();
       });
